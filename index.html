@@ -9,30 +9,108 @@
 
 <body>
     <header>
-        <img src="Profile.jpg" alt="Profile Picture of Jishnu Bhabak" height="150">
-        <h1>Jishnu Bhabak - Bio Page</h1>
+        <!-- Upgrade 1: Semantic Figure and Figcaption for the image -->
+        <figure>
+            <img src="Profile.jpg" alt="Profile Picture of Jishnu Bhabak" height="150">
+            <figcaption><strong>Jishnu Bhabak</strong> - Aspiring Web Developer</figcaption>
+        </figure>
+        <h1>Bio Page</h1>
     </header>
 
     <main>
-        <section>
+        <section id="personal-info">
+            <h2>Personal Information</h2>
             <p><strong>Name :</strong> Jishnu Bhabak</p>
             <p><strong>Birthdate :</strong> 09/07/2004</p>
             <p><strong>Hometown :</strong> Sat Simulia</p>
-        </section>
-        
-        <section>
+            <br>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore placeat ut labore maiores incidunt, quam vel ipsa in culpa ipsum, blanditiis deserunt id, distinctio ex nemo voluptates eaque nam veniam? I specialize in <abbr title="HyperText Markup Language">HTML</abbr>, <abbr title="Cascading Style Sheets">CSS</abbr>, and <abbr title="JavaScript">JS</abbr>.</p>
         </section>
+        
+        <section id="qualifications">
+            <!-- Upgrade 2: Structured Data Table for qualifications -->
+            <h2>My Qualifications</h2>
+            <table border="1">
+                <tr>
+                    <th>Technology / Skill</th>
+                    <th>Achievement / Rank</th>
+                </tr>
+                <tr>
+                    <td>HTML</td>
+                    <td>1st place</td>
+                </tr>
+                <tr>
+                    <td>CSS</td>
+                    <td>2nd place</td>
+                </tr>
+                <tr>
+                    <td>Javascript</td>
+                    <td>3rd place</td>
+                </tr>
+                <tr>
+                    <td>Bootstrap</td>
+                    <td>4th place</td>
+                </tr>
+                <tr>
+                    <td>Tailwind CSS</td>
+                    <td>5th place</td>
+                </tr>
+            </table>
+        </section>
 
-        <section>
-            <h3>My Qualifications</h3>
+        <section id="skills">
+            <!-- Upgrade 3: Native Skill Gauges using the meter tag -->
+            <h2>Technical Skills Dashboard</h2>
             <ul>
-                <li><strong>HTML</strong>: 1st place</li>
-                <li><strong>CSS</strong>: 2nd place</li>
-                <li><strong>Javascript</strong>: 3rd place</li>
-                <li><strong>Bootstrap</strong>: 4th place</li>
-                <li><strong>Tailwind CSS</strong>: 5th place</li>
+                <li>
+                    <label for="html-skill">HTML5 Semantic Structure:</label>
+                    <meter id="html-skill" value="9" min="0" max="10">9/10</meter>
+                </li>
+                <li>
+                    <label for="css-skill">CSS (Theoretical Knowledge):</label>
+                    <meter id="css-skill" value="8" min="0" max="10">8/10</meter>
+                </li>
+                <li>
+                    <label for="js-skill">JavaScript Logic:</label>
+                    <meter id="js-skill" value="6" min="0" max="10">6/10</meter>
+                </li>
             </ul>
+        </section>
+
+        <section id="projects">
+            <!-- Upgrade 4: Interactive Expandable Sections -->
+            <h2>My Projects</h2>
+            <details>
+                <summary><strong>Strict HTML5 Bio Page</strong></summary>
+                <p>A completely pure HTML5 website built for my computer science assignment to demonstrate semantic markup, accessibility, and document structure without relying on CSS.</p>
+            </details>
+            <details>
+                <summary><strong>Future Developments</strong></summary>
+                <p>More exciting web development projects coming soon as I continue expanding my toolkit!</p>
+            </details>
+        </section>
+
+        <section id="contact">
+            <!-- Upgrade 5: Professional Contact Form -->
+            <h2>Send Me a Message</h2>
+            <form action="mailto:bhabakjishnu2004@gmail.com" method="post" enctype="text/plain">
+                <p>
+                    <label for="name">Your Name:</label><br>
+                    <input type="text" id="name" name="name" required>
+                </p>
+                <p>
+                    <label for="email">Your Email:</label><br>
+                    <input type="email" id="email" name="email" required>
+                </p>
+                <p>
+                    <label for="message">Message:</label><br>
+                    <textarea id="message" name="message" rows="4" cols="30" required></textarea>
+                </p>
+                <p>
+                    <button type="submit">Submit</button>
+                    <button type="reset">Clear</button>
+                </p>
+            </form>
         </section>
     </main>
 
@@ -40,14 +118,15 @@
         <hr>
         <address>
             <p>
-                <strong>Contact :</strong> 
+                <strong>Phone Contact :</strong> 
                 <a href="tel:+916294131405">+916294131405</a>
             </p>
             <p>
-                <strong>Gmail :</strong> 
+                <strong>Direct Email :</strong> 
                 <a href="mailto:bhabakjishnu2004@gmail.com">bhabakjishnu2004@gmail.com</a>
             </p>
         </address>
+        <p><small>&copy; 2026 Jishnu Bhabak. Built with 100% Pure HTML5.</small></p>
     </footer>
 </body>
 
