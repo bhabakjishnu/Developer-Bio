@@ -9,7 +9,6 @@
 
 <body>
     <header>
-        <!-- Upgrade 1: Semantic Figure and Figcaption for the image -->
         <figure>
             <img src="Profile.jpg" alt="Profile Picture of Jishnu Bhabak" height="150">
             <figcaption><strong>Jishnu Bhabak</strong> - Aspiring Web Developer</figcaption>
@@ -20,7 +19,7 @@
         <section id="personal-info">
             <h2>Personal Information</h2>
             <p><strong>Name :</strong> Jishnu Bhabak</p>
-            <p><strong>Birthdate :</strong> 09/07/2004</p>
+            <p><strong>Birthdate :</strong> <time datetime="2004-07-09">09/07/2004</time></p>
             <p><strong>Hometown :</strong> Sat Simulia</p>
             <br>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore placeat ut labore maiores incidunt,
@@ -29,37 +28,39 @@
                     title="Cascading Style Sheets">CSS</abbr>, and <abbr title="JavaScript">JS</abbr>.</p>
         </section>
         <section id="qualifications">
-            <!-- Upgrade 2: Structured Data Table for qualifications -->
             <h2>My Qualifications</h2>
-            <table border="1">
-                <tr>
-                    <th>Technology / Skill</th>
-                    <th>Achievement / Rank</th>
-                </tr>
-                <tr>
-                    <td>HTML</td>
-                    <td>1st place</td>
-                </tr>
-                <tr>
-                    <td>CSS</td>
-                    <td>2nd place</td>
-                </tr>
-                <tr>
-                    <td>Javascript</td>
-                    <td>3rd place</td>
-                </tr>
-                <tr>
-                    <td>Bootstrap</td>
-                    <td>4th place</td>
-                </tr>
-                <tr>
-                    <td>Tailwind CSS</td>
-                    <td>5th place</td>
-                </tr>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Technology / Skill</th>
+                        <th>Achievement / Rank</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>HTML</td>
+                        <td>1st place</td>
+                    </tr>
+                    <tr>
+                        <td>CSS</td>
+                        <td>2nd place</td>
+                    </tr>
+                    <tr>
+                        <td>Javascript</td>
+                        <td>3rd place</td>
+                    </tr>
+                    <tr>
+                        <td>Bootstrap</td>
+                        <td>4th place</td>
+                    </tr>
+                    <tr>
+                        <td>Tailwind CSS</td>
+                        <td>5th place</td>
+                    </tr>
+                </tbody>
             </table>
         </section>
         <section id="skills">
-            <!-- Upgrade 3: Native Skill Gauges using the meter tag -->
             <h2>Technical Skills Dashboard</h2>
             <ul>
                 <li>
@@ -77,7 +78,6 @@
             </ul>
         </section>
         <section id="projects">
-            <!-- Upgrade 4: Interactive Expandable Sections -->
             <h2>My Projects</h2>
             <details>
                 <summary><strong>Strict HTML5 Bio Page</strong></summary>
@@ -90,16 +90,15 @@
             </details>
         </section>
         <section id="contact">
-            <!-- Upgrade 5: Professional Contact Form -->
             <h2>Send Me a Message</h2>
             <form action="mailto:bhabakjishnu2004@gmail.com" method="post" enctype="text/plain">
                 <p>
                     <label for="name">Your Name:</label><br>
-                    <input type="text" id="name" name="name" required>
+                    <input type="text" id="name" name="name" autocomplete="name" required>
                 </p>
                 <p>
                     <label for="email">Your Email:</label><br>
-                    <input type="email" id="email" name="email" required>
+                    <input type="email" id="email" name="email" autocomplete="email" required>
                 </p>
                 <p>
                     <label for="message">Message:</label><br>
@@ -114,8 +113,6 @@
         <section id="learning-status">
             <h2>Learning-progress...</h2>
             <p>Please wait while your learning progress show to our servers.</p>
-
-            <!-- The Progress Bar -->
             <label for="learning-progress">Learning progress:</label>
             <progress id="learning-progress" value="70" max="100">70%</progress>
         </section>
