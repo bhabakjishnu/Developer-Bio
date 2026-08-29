@@ -1,0 +1,406 @@
+/* ==========================================================================
+   CSS Variables (Theme & Configuration)
+   ========================================================================== */
+   :root {
+    /* Color Palette */
+    --bg-body: #e9ecef;
+    --bg-container: #ffffff;
+    --bg-section-title: #f0f0f0;
+    --bg-card: #f8f9fa;
+    --text-main: #343a40;
+    --text-muted: #495057;
+    --text-light: #edf2f4;
+    --text-meta: #6c757d;
+    --primary-dark: #2b2d42;
+    --primary-light: #8d99ae;
+    --accent: #d90429;
+    --border-color: #dee2e6;
+    --border-light: #ced4da;
+
+    /* Typography */
+    --font-stack: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    
+    /* Spacing & Layout */
+    --border-radius-lg: 12px;
+    --border-radius-md: 8px;
+    --border-radius-sm: 4px;
+    --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.1);
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* ==========================================================================
+   Global Reset & Base Styles
+   ========================================================================== */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-stack);
+    background-color: var(--bg-body);
+    color: var(--text-main);
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+/* ==========================================================================
+   Main Container Layout
+   ========================================================================== */
+.bio-container {
+    max-width: 800px;
+    width: 100%;
+    background-color: var(--bg-container);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-md);
+    overflow: hidden;
+}
+
+.main-content {
+    padding: 30px 40px;
+}
+
+.bio-section {
+    margin-bottom: 40px;
+}
+
+/* ==========================================================================
+   Header Component
+   ========================================================================== */
+.bio-header {
+    background: linear-gradient(135deg, var(--primary-dark), var(--primary-light));
+    color: var(--bg-container);
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.header-title {
+    margin: 0 0 20px 0;
+    font-size: 2.2em;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.profile-figure {
+    margin: 0;
+    padding: 0;
+}
+
+.profile-img {
+    border-radius: 50%;
+    border: 4px solid var(--bg-container);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    object-fit: cover;
+}
+
+.profile-caption {
+    margin-top: 15px;
+    font-size: 1.1em;
+    color: var(--text-light);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.profile-name {
+    font-size: 1.3em;
+}
+
+/* ==========================================================================
+   Typography & Shared Elements
+   ========================================================================== */
+.section-title {
+    background-color: var(--bg-section-title);
+    border-bottom: 2px solid var(--text-light);
+    padding-bottom: 8px;
+    margin-top: 0;
+}
+
+.tech-abbr {
+    text-decoration: underline dotted var(--accent);
+    font-weight: bold;
+    cursor: help;
+}
+
+/* ==========================================================================
+   Personal Information Grid
+   ========================================================================== */
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+    margin: 0 0 15px 0;
+}
+
+.info-item {
+    margin: 0;
+}
+
+.info-item dt {
+    font-weight: bold;
+    display: inline;
+}
+
+.info-item dd {
+    display: inline;
+    margin: 0;
+}
+
+.bio-description {
+    color: var(--text-muted);
+    text-align: justify;
+    line-height: 1.8;
+}
+
+/* ==========================================================================
+   Qualifications Table
+   ========================================================================== */
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    border-radius: var(--border-radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+}
+
+.data-table caption {
+    text-align: left;
+    font-size: 0.85em;
+    color: var(--text-meta);
+    padding-bottom: 8px;
+}
+
+.data-table thead {
+    background-color: var(--primary-light);
+    color: var(--bg-container);
+    text-align: left;
+}
+
+.data-table th, 
+.data-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.data-table tbody tr:nth-child(odd) {
+    background-color: var(--bg-card);
+}
+
+.data-table tbody tr:nth-child(even) {
+    background-color: var(--bg-container);
+}
+
+.data-table tbody th {
+    font-weight: normal;
+    text-align: left;
+}
+
+.data-table tbody td {
+    font-weight: 600;
+}
+
+/* ==========================================================================
+   Skills Dashboard
+   ========================================================================== */
+.skills-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 15px 0 0 0;
+}
+
+.skill-item {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.skill-item label {
+    font-weight: 500;
+    width: 60%;
+}
+
+.skill-item meter {
+    width: 35%;
+    height: 20px;
+}
+
+/* ==========================================================================
+   Projects Details
+   ========================================================================== */
+.project-details {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+}
+
+.project-details summary {
+    font-weight: 600;
+    cursor: pointer;
+    color: var(--accent);
+}
+
+.project-details p {
+    margin: 10px 0 0 0;
+    color: var(--text-muted);
+}
+
+/* ==========================================================================
+   Contact Form
+   ========================================================================== */
+.contact-form {
+    background-color: var(--bg-card);
+    padding: 20px;
+    border-radius: var(--border-radius-md);
+    border: 1px solid var(--border-color);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.form-group input, 
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--border-light);
+    border-radius: var(--border-radius-sm);
+    font-family: inherit;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus, 
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-light);
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.form-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.btn {
+    border: none;
+    padding: 10px 20px;
+    border-radius: var(--border-radius-sm);
+    font-weight: 600;
+    cursor: pointer;
+    flex: 1;
+    transition: opacity 0.2s;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+.btn-primary {
+    background-color: var(--accent);
+    color: var(--bg-container);
+}
+
+.btn-secondary {
+    background-color: var(--primary-light);
+    color: var(--bg-container);
+}
+
+/* ==========================================================================
+   Learning Tracker Component
+   ========================================================================== */
+.tracker-section {
+    background-color: var(--bg-body);
+    padding: 20px;
+    border-radius: var(--border-radius-md);
+    text-align: center;
+}
+
+.tracker-section h2 {
+    margin-top: 0;
+    color: var(--primary-dark);
+    font-size: 1.2em;
+}
+
+.tracker-status {
+    color: var(--text-muted);
+    font-size: 0.9em;
+    margin-bottom: 15px;
+}
+
+.tracker-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.tracker-bar label {
+    font-weight: 600;
+    color: var(--primary-dark);
+}
+
+.tracker-bar progress {
+    width: 60%;
+    height: 20px;
+}
+
+/* ==========================================================================
+   Footer Component
+   ========================================================================== */
+.bio-footer {
+    background-color: var(--primary-dark);
+    color: var(--text-light);
+    padding: 30px 40px;
+    text-align: center;
+}
+
+.contact-info {
+    font-style: normal;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.contact-info p {
+    margin: 0;
+}
+
+.contact-info strong {
+    color: var(--primary-light);
+}
+
+.contact-info a {
+    color: var(--text-light);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.contact-info a:hover {
+    color: var(--bg-container);
+}
+
+.bio-footer hr {
+    border: none;
+    border-top: 1px solid var(--text-muted);
+    margin-bottom: 20px;
+}
+
+.copyright {
+    margin: 0;
+    font-size: 0.85em;
+    color: var(--primary-light);
+}
