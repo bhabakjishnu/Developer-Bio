@@ -1,223 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Developer bio page for Jishnu Bhabak, aspiring web developer specializing in HTML, CSS, and JavaScript.">
+    <meta name="description" content="Developer bio page for Jishnu Bhabak, aspiring web developer specializing in HTML, CSS, and JavaScript.">
     <title>Jishnu Bhabak - Developer Bio</title>
+    <!-- External CSS link -->
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
-
-<body
-    style="font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; background-color: #e9ecef; color: #343a40; line-height: 1.6; margin: 0; padding: 20px; display: flex; justify-content: center; box-sizing: border-box;">
-    <div
-        style="max-width: 800px; width: 100%; background-color: #ffffff; border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.1); overflow: hidden;">
-        <header
-            style="background: linear-gradient(135deg, #2b2d42, #8d99ae); color: #ffffff; padding: 40px 20px; text-align: center;">
-            <h1 style="margin: 0 0 20px 0; font-size: 2.2em; font-weight: 700; letter-spacing: 1px;">Bio Page</h1>
-            <figure style="margin: 0; padding: 0;">
-                <img src="assets/images/Profile.jpg" alt="Portrait photo of Jishnu Bhabak" height="150" width="150"
-                    style="border-radius: 50%; border: 4px solid #ffffff; box-shadow: 0 4px 10px rgba(0,0,0,0.2); object-fit: cover;">
-                <figcaption
-                    style="margin-top: 15px; font-size: 1.1em; color: #edf2f4; text-shadow: 1px 1px 2px rgba(0,0,0,0.3);">
-                    <strong style="font-size: 1.3em;">Jishnu Bhabak</strong> <br> Aspiring Web Developer
+<body>
+    <div class="bio-container">
+        <header class="bio-header">
+            <h1 class="header-title">Bio Page</h1>
+            <figure class="profile-figure">
+                <img src="assets/images/Profile.jpg" alt="Portrait photo of Jishnu Bhabak" height="150" width="150" class="profile-img">
+                <figcaption class="profile-caption">
+                    <strong class="profile-name">Jishnu Bhabak</strong> <br> Aspiring Web Developer
                 </figcaption>
             </figure>
         </header>
-        <main style="padding: 30px 40px;">
-            <section aria-labelledby="personal-info-heading" style="margin-bottom: 40px;">
-                <h2 id="personal-info-heading"
-                    style="background-color:rgb(240, 240, 240); border-bottom: 2px solid #edf2f4; padding-bottom: 8px; margin-top: 0;">
-                    Personal Information</h2>
-                <dl
-                    style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; margin: 0 0 15px 0;">
-                    <div style="margin: 0;">
-                        <dt style="font-weight: bold; display: inline;">Name :</dt>
-                        <dd style="display: inline; margin: 0;"> Jishnu Bhabak</dd>
+
+        <main class="main-content">
+            <section aria-labelledby="personal-info-heading" class="bio-section">
+                <h2 id="personal-info-heading" class="section-title">Personal Information</h2>
+                <dl class="info-grid">
+                    <div class="info-item">
+                        <dt>Name :</dt>
+                        <dd>Jishnu Bhabak</dd>
                     </div>
-                    <div style="margin: 0;">
-                        <dt style="font-weight: bold; display: inline;">Hometown :</dt>
-                        <dd style="display: inline; margin: 0;"> Sat Simulia</dd>
+                    <div class="info-item">
+                        <dt>Hometown :</dt>
+                        <dd>Sat Simulia</dd>
                     </div>
-                    <div style="margin: 0;">
-                        <dt style="font-weight: bold; display: inline;">DOB :</dt>
-                        <dd style="display: inline; margin: 0;"> 09/07/2004</dd>
+                    <div class="info-item">
+                        <dt>DOB :</dt>
+                        <dd>09/07/2004</dd>
                     </div>
-                    <div style="margin: 0;">
-                        <dt style="font-weight: bold; display: inline;">Country :</dt>
-                        <dd style="display: inline; margin: 0;"> India</dd>
+                    <div class="info-item">
+                        <dt>Country :</dt>
+                        <dd>India</dd>
                     </div>
                 </dl>
-                <p style="color: #495057; text-align: justify; line-height: 1.8;">
+                <p class="bio-description">
                     Computer science student with a focus on front-end fundamentals. I specialize in
-                    <abbr title="HyperText Markup Language"
-                        style="text-decoration: underline dotted #d90429; font-weight: bold; cursor: help;">HTML</abbr>,
-                    <abbr title="Cascading Style Sheets"
-                        style="text-decoration: underline dotted #d90429; font-weight: bold; cursor: help;">CSS</abbr>,
-                    and
-                    <abbr title="JavaScript"
-                        style="text-decoration: underline dotted #d90429; font-weight: bold; cursor: help;">JS</abbr>,
+                    <abbr title="HyperText Markup Language" class="tech-abbr">HTML</abbr>,
+                    <abbr title="Cascading Style Sheets" class="tech-abbr">CSS</abbr>, and
+                    <abbr title="JavaScript" class="tech-abbr">JS</abbr>,
                     and I'm actively building out my portfolio with semantic, accessible markup.
                 </p>
             </section>
-            <section aria-labelledby="qualifications-heading" style="margin-bottom: 40px;">
-                <h2 id="qualifications-heading"
-                    style="background-color:rgb(240, 240, 240); border-bottom: 2px solid #edf2f4; padding-bottom: 8px;">
-                    My Qualifications
-                </h2>
-                <table
-                    style="width: 100%; border-collapse: collapse; margin-top: 15px; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
-                    <caption style="text-align: left; font-size: 0.85em; color: #6c757d; padding-bottom: 8px;">
-                        Competition placements by technology</caption>
-                    <thead style="background-color: #8d99ae; color: #ffffff; text-align: left;">
+
+            <section aria-labelledby="qualifications-heading" class="bio-section">
+                <h2 id="qualifications-heading" class="section-title">My Qualifications</h2>
+                <table class="data-table">
+                    <caption>Competition placements by technology</caption>
+                    <thead>
                         <tr>
-                            <th scope="col" style="padding: 12px 15px;">Technology / Skill</th>
-                            <th scope="col" style="padding: 12px 15px;">Achievement / Rank</th>
+                            <th scope="col">Technology / Skill</th>
+                            <th scope="col">Achievement / Rank</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr style="background-color: #f8f9fa;">
-                            <th scope="row"
-                                style="padding: 12px 15px; border-bottom: 1px solid #dee2e6; font-weight: normal; text-align: left;">
-                                HTML</th>
-                            <td style="padding: 12px 15px; border-bottom: 1px solid #dee2e6; font-weight: 600;">1st
-                                place</td>
+                        <tr>
+                            <th scope="row">HTML</th>
+                            <td>1st place</td>
                         </tr>
-                        <tr style="background-color: #ffffff;">
-                            <th scope="row"
-                                style="padding: 12px 15px; border-bottom: 1px solid #dee2e6; font-weight: normal; text-align: left;">
-                                CSS</th>
-                            <td style="padding: 12px 15px; border-bottom: 1px solid #dee2e6; font-weight: 600;">2nd
-                                place</td>
+                        <tr>
+                            <th scope="row">CSS</th>
+                            <td>2nd place</td>
                         </tr>
-                        <tr style="background-color: #f8f9fa;">
-                            <th scope="row"
-                                style="padding: 12px 15px; border-bottom: 1px solid #dee2e6; font-weight: normal; text-align: left;">
-                                JavaScript</th>
-                            <td style="padding: 12px 15px; border-bottom: 1px solid #dee2e6; font-weight: 600;">3rd
-                                place</td>
+                        <tr>
+                            <th scope="row">JavaScript</th>
+                            <td>3rd place</td>
                         </tr>
-                        <tr style="background-color: #ffffff;">
-                            <th scope="row"
-                                style="padding: 12px 15px; border-bottom: 1px solid #dee2e6; font-weight: normal; text-align: left;">
-                                Bootstrap</th>
-                            <td style="padding: 12px 15px; border-bottom: 1px solid #dee2e6; font-weight: 600;">4th
-                                place</td>
+                        <tr>
+                            <th scope="row">Bootstrap</th>
+                            <td>4th place</td>
                         </tr>
-                        <tr style="background-color: #f8f9fa;">
-                            <th scope="row" style="padding: 12px 15px; font-weight: normal; text-align: left;">Tailwind
-                                CSS</th>
-                            <td style="padding: 12px 15px; font-weight: 600;">5th place</td>
+                        <tr>
+                            <th scope="row">Tailwind CSS</th>
+                            <td>5th place</td>
                         </tr>
                     </tbody>
                 </table>
             </section>
-            <section aria-labelledby="skills-heading" style="margin-bottom: 40px;">
-                <h2 id="skills-heading"
-                    style="background-color:rgb(240, 240, 240); border-bottom: 2px solid #edf2f4; padding-bottom: 8px;">
-                    Technical Skills Dashboard</h2>
-                <ul style="list-style-type: none; padding: 0; margin: 15px 0 0 0;">
-                    <li
-                        style="margin-bottom: 15px; display: flex; align-items: center; justify-content: space-between;">
-                        <label for="html-skill" style="font-weight: 500; width: 60%;">HTML5 Semantic Structure:</label>
-                        <meter id="html-skill" value="9" min="0" max="10" low="4" high="8" optimum="10"
-                            style="width: 35%; height: 20px;">9 out of 10</meter>
+
+            <section aria-labelledby="skills-heading" class="bio-section">
+                <h2 id="skills-heading" class="section-title">Technical Skills Dashboard</h2>
+                <ul class="skills-list">
+                    <li class="skill-item">
+                        <label for="html-skill">HTML5 Semantic Structure:</label>
+                        <meter id="html-skill" value="9" min="0" max="10" low="4" high="8" optimum="10">9 out of 10</meter>
                     </li>
-                    <li
-                        style="margin-bottom: 15px; display: flex; align-items: center; justify-content: space-between;">
-                        <label for="css-skill" style="font-weight: 500; width: 60%;">CSS (Theoretical
-                            Knowledge):</label>
-                        <meter id="css-skill" value="8" min="0" max="10" low="4" high="8" optimum="10"
-                            style="width: 35%; height: 20px;">8 out of 10</meter>
+                    <li class="skill-item">
+                        <label for="css-skill">CSS (Theoretical Knowledge):</label>
+                        <meter id="css-skill" value="8" min="0" max="10" low="4" high="8" optimum="10">8 out of 10</meter>
                     </li>
-                    <li
-                        style="margin-bottom: 15px; display: flex; align-items: center; justify-content: space-between;">
-                        <label for="js-skill" style="font-weight: 500; width: 60%;">JavaScript Logic:</label>
-                        <meter id="js-skill" value="6" min="0" max="10" low="4" high="8" optimum="10"
-                            style="width: 35%; height: 20px;">6 out of 10</meter>
+                    <li class="skill-item">
+                        <label for="js-skill">JavaScript Logic:</label>
+                        <meter id="js-skill" value="6" min="0" max="10" low="4" high="8" optimum="10">6 out of 10</meter>
                     </li>
                 </ul>
             </section>
-            <section aria-labelledby="projects-heading" style="margin-bottom: 40px;">
-                <h2 id="projects-heading"
-                    style="background-color:rgb(240, 240, 240); border-bottom: 2px solid #edf2f4; padding-bottom: 8px;">
-                    My Projects</h2>
-                <details
-                    style="background-color: #f8f9fa; border: 1px solid #dee2e6; border-radius: 6px; padding: 10px 15px; margin-bottom: 10px;">
-                    <summary style="font-weight: 600; cursor: pointer; color: #d90429;">Strict HTML5 Bio Page</summary>
-                    <p style="margin: 10px 0 0 0; color: #495057;">A completely pure HTML5 website built for my computer
-                        science assignment to demonstrate semantic markup, accessibility, and document structure.</p>
+
+            <section aria-labelledby="projects-heading" class="bio-section">
+                <h2 id="projects-heading" class="section-title">My Projects</h2>
+                <details class="project-details">
+                    <summary>Strict HTML5 Bio Page</summary>
+                    <p>A completely pure HTML5 website built for my computer science assignment to demonstrate semantic markup, accessibility, and document structure.</p>
                 </details>
-                <details
-                    style="background-color: #f8f9fa; border: 1px solid #dee2e6; border-radius: 6px; padding: 10px 15px;">
-                    <summary style="font-weight: 600; cursor: pointer; color: #d90429;">Future Developments</summary>
-                    <p style="margin: 10px 0 0 0; color: #495057;">More exciting web development projects coming soon as
-                        I continue expanding my toolkit!</p>
+                <details class="project-details">
+                    <summary>Future Developments</summary>
+                    <p>More exciting web development projects coming soon as I continue expanding my toolkit!</p>
                 </details>
             </section>
-            <section aria-labelledby="contact-heading" style="margin-bottom: 40px;">
-                <h2 id="contact-heading"
-                    style="background-color:rgb(240, 240, 240); border-bottom: 2px solid #edf2f4; padding-bottom: 8px;">
-                    Send Me a Message</h2>
-                <form action="mailto:bhabakjishnu2004@gmail.com" method="post" enctype="text/plain"
-                    style="background-color: #f8f9fa; padding: 20px; border-radius: 8px; border: 1px solid #dee2e6;">
-                    <div style="margin-bottom: 15px;">
-                        <label for="name" style="display: block; font-weight: 500; margin-bottom: 5px;">Your
-                            Name:</label>
-                        <input type="text" id="name" name="name" autocomplete="name" required
-                            style="width: 100%; padding: 10px; border: 1px solid #ced4da; border-radius: 4px; box-sizing: border-box; font-family: inherit;">
+
+            <section aria-labelledby="contact-heading" class="bio-section">
+                <h2 id="contact-heading" class="section-title">Send Me a Message</h2>
+                <form action="mailto:bhabakjishnu2004@gmail.com" method="post" enctype="text/plain" class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Your Name:</label>
+                        <input type="text" id="name" name="name" autocomplete="name" required>
                     </div>
-                    <div style="margin-bottom: 15px;">
-                        <label for="email" style="display: block; font-weight: 500; margin-bottom: 5px;">Your
-                            Email:</label>
-                        <input type="email" id="email" name="email" autocomplete="email" required
-                            style="width: 100%; padding: 10px; border: 1px solid #ced4da; border-radius: 4px; box-sizing: border-box; font-family: inherit;">
+                    <div class="form-group">
+                        <label for="email">Your Email:</label>
+                        <input type="email" id="email" name="email" autocomplete="email" required>
                     </div>
-                    <div style="margin-bottom: 15px;">
-                        <label for="message"
-                            style="display: block; font-weight: 500; margin-bottom: 5px;">Message:</label>
-                        <textarea id="message" name="message" rows="4" required
-                            style="width: 100%; padding: 10px; border: 1px solid #ced4da; border-radius: 4px; box-sizing: border-box; font-family: inherit; resize: vertical;"></textarea>
+                    <div class="form-group">
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" rows="4" required></textarea>
                     </div>
-                    <div style="display: flex; gap: 10px;">
-                        <button type="submit"
-                            style="background-color: #d90429; color: #ffffff; border: none; padding: 10px 20px; border-radius: 4px; font-weight: 600; cursor: pointer; flex: 1;">Submit</button>
-                        <button type="reset"
-                            style="background-color: #8d99ae; color: #ffffff; border: none; padding: 10px 20px; border-radius: 4px; font-weight: 600; cursor: pointer; flex: 1;">Clear</button>
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <button type="reset" class="btn btn-secondary">Clear</button>
                     </div>
                 </form>
             </section>
-            <section aria-labelledby="learning-status-heading"
-                style="background-color: #e9ecef; padding: 20px; border-radius: 8px; text-align: center;">
-                <h2 id="learning-status-heading" style="margin-top: 0; color: #2b2d42; font-size: 1.2em;">Learning
-                    Progress Tracker</h2>
-                <p style="color: #495057; font-size: 0.9em; margin-bottom: 15px;">Syncing latest skills to server...</p>
-                <div style="display: flex; align-items: center; justify-content: center; gap: 15px;">
-                    <label for="learning-progress" style="font-weight: 600; color: #2b2d42;">Overall Progress:</label>
-                    <progress id="learning-progress" value="70" max="100"
-                        style="width: 60%; height: 20px;">70%</progress>
+
+            <section aria-labelledby="learning-status-heading" class="tracker-section">
+                <h2 id="learning-status-heading">Learning Progress Tracker</h2>
+                <p class="tracker-status">Syncing latest skills to server...</p>
+                <div class="tracker-bar">
+                    <label for="learning-progress">Overall Progress:</label>
+                    <progress id="learning-progress" value="70" max="100">70%</progress>
                 </div>
             </section>
         </main>
-        <footer style="background-color: #2b2d42; color: #edf2f4; padding: 30px 40px; text-align: center;">
-            <address
-                style="font-style: normal; margin-bottom: 20px; display: flex; justify-content: center; gap: 30px; flex-wrap: wrap;">
-                <p style="margin: 0;">
-                    <strong style="color: #8d99ae;">Phone:</strong>
-                    <a href="tel:+916294131405" style="color: #edf2f4; text-decoration: none;">+91 6294 131 405</a>
+
+        <footer class="bio-footer">
+            <address class="contact-info">
+                <p>
+                    <strong>Phone:</strong>
+                    <a href="tel:+916294131405">+91 6294 131 405</a>
                 </p>
-                <p style="margin: 0;">
-                    <strong style="color: #8d99ae;">Email:</strong>
-                    <a href="mailto:bhabakjishnu2004@gmail.com"
-                        style="color: #edf2f4; text-decoration: none;">bhabakjishnu2004@gmail.com</a>
+                <p>
+                    <strong>Email:</strong>
+                    <a href="mailto:bhabakjishnu2004@gmail.com">bhabakjishnu2004@gmail.com</a>
                 </p>
             </address>
-            <hr style="border: none; border-top: 1px solid #495057; margin-bottom: 20px;">
-            <p style="margin: 0; font-size: 0.85em; color: #8d99ae;">&copy; 2026 Jishnu Bhabak. Built with Semantic
-                HTML5 &amp; Inline CSS3.</p>
+            <hr>
+            <p class="copyright">&copy; 2026 Jishnu Bhabak. Built with Semantic HTML5 & CSS3.</p>
         </footer>
     </div>
 </body>
-
 </html>
