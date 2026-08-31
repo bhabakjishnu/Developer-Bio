@@ -5,39 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Developer bio page for Jishnu Bhabak, aspiring web developer specializing in HTML, CSS, and JavaScript.">
     <title>Jishnu Bhabak - Developer Bio</title>
-    <!-- External CSS link -->
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
+
 <body>
-    <div class="bio-container">
-        <header class="bio-header">
-            <h1 class="header-title">Bio Page</h1>
+    <header class="bio-header">
+        <div class="header-brand">JB.</div>
+        <nav class="main-nav" aria-label="Main Navigation">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#qualifications">Qualifications</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="bio-container" id="home">
+        <div class="profile-header">
+            <h1 class="header-title">Developer Bio</h1>
             <figure class="profile-figure">
-                <img src="assets/images/Profile.jpg" alt="Portrait photo of Jishnu Bhabak" height="150" width="150" class="profile-img">
+                <img src="assets/images/Profile.jpg" alt="Portrait photo of Jishnu Bhabak" onerror="this.src='https://ui-avatars.com/api/?name=Jishnu+Bhabak&size=150&background=2b2d42&color=fff'" height="150" width="150" class="profile-img">
                 <figcaption class="profile-caption">
-                    <strong class="profile-name">Jishnu Bhabak</strong> <br> Aspiring Web Developer
+                    <strong class="profile-name">Jishnu Bhabak</strong> <br> 
+                    Aspiring Web Developer
                 </figcaption>
             </figure>
-        </header>
-
+        </div>
         <main class="main-content">
-            <section aria-labelledby="personal-info-heading" class="bio-section">
+            <section id="about" aria-labelledby="personal-info-heading" class="bio-section">
                 <h2 id="personal-info-heading" class="section-title">Personal Information</h2>
                 <dl class="info-grid">
                     <div class="info-item">
-                        <dt>Name :</dt>
+                        <dt>Name:</dt>
                         <dd>Jishnu Bhabak</dd>
                     </div>
                     <div class="info-item">
-                        <dt>Hometown :</dt>
+                        <dt>Hometown:</dt>
                         <dd>Sat Simulia</dd>
                     </div>
                     <div class="info-item">
-                        <dt>DOB :</dt>
+                        <dt>DOB:</dt>
                         <dd>09/07/2004</dd>
                     </div>
                     <div class="info-item">
-                        <dt>Country :</dt>
+                        <dt>Country:</dt>
                         <dd>India</dd>
                     </div>
                 </dl>
@@ -50,42 +63,44 @@
                 </p>
             </section>
 
-            <section aria-labelledby="qualifications-heading" class="bio-section">
+            <section id="qualifications" aria-labelledby="qualifications-heading" class="bio-section">
                 <h2 id="qualifications-heading" class="section-title">My Qualifications</h2>
-                <table class="data-table">
-                    <caption>Competition placements by technology</caption>
-                    <thead>
-                        <tr>
-                            <th scope="col">Technology / Skill</th>
-                            <th scope="col">Achievement / Rank</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <th scope="row">HTML</th>
-                            <td>1st place</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">CSS</th>
-                            <td>2nd place</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">JavaScript</th>
-                            <td>3rd place</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Bootstrap</th>
-                            <td>4th place</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Tailwind CSS</th>
-                            <td>5th place</td>
-                        </tr>
-                    </tbody>
-                </table>
+                <div class="table-responsive">
+                    <table class="data-table">
+                        <caption>Competition placements by technology</caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">Technology / Skill</th>
+                                <th scope="col">Achievement / Rank</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">HTML</th>
+                                <td>1st place</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">CSS</th>
+                                <td>2nd place</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">JavaScript</th>
+                                <td>3rd place</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Bootstrap</th>
+                                <td>4th place</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Tailwind CSS</th>
+                                <td>5th place</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </section>
 
-            <section aria-labelledby="skills-heading" class="bio-section">
+            <section id="skills" aria-labelledby="skills-heading" class="bio-section">
                 <h2 id="skills-heading" class="section-title">Technical Skills Dashboard</h2>
                 <ul class="skills-list">
                     <li class="skill-item">
@@ -103,9 +118,9 @@
                 </ul>
             </section>
 
-            <section aria-labelledby="projects-heading" class="bio-section">
+            <section id="projects" aria-labelledby="projects-heading" class="bio-section">
                 <h2 id="projects-heading" class="section-title">My Projects</h2>
-                <details class="project-details">
+                <details class="project-details" open>
                     <summary>Strict HTML5 Bio Page</summary>
                     <p>A completely pure HTML5 website built for my computer science assignment to demonstrate semantic markup, accessibility, and document structure.</p>
                 </details>
@@ -115,20 +130,20 @@
                 </details>
             </section>
 
-            <section aria-labelledby="contact-heading" class="bio-section">
+            <section id="contact" aria-labelledby="contact-heading" class="bio-section">
                 <h2 id="contact-heading" class="section-title">Send Me a Message</h2>
-                <form action="mailto:bhabakjishnu2004@gmail.com" method="post" enctype="text/plain" class="contact-form">
+                <form action="https://formspree.io/f/your_endpoint_here" method="post" class="contact-form">
                     <div class="form-group">
                         <label for="name">Your Name:</label>
-                        <input type="text" id="name" name="name" autocomplete="name" required>
+                        <input type="text" id="name" name="name" autocomplete="name" required placeholder="John Doe">
                     </div>
                     <div class="form-group">
                         <label for="email">Your Email:</label>
-                        <input type="email" id="email" name="email" autocomplete="email" required>
+                        <input type="email" id="email" name="email" autocomplete="email" required placeholder="john@example.com">
                     </div>
                     <div class="form-group">
                         <label for="message">Message:</label>
-                        <textarea id="message" name="message" rows="4" required></textarea>
+                        <textarea id="message" name="message" rows="4" required placeholder="How can I help you?"></textarea>
                     </div>
                     <div class="form-actions">
                         <button type="submit" class="btn btn-primary">Submit</button>
