@@ -1,182 +1,120 @@
-# 🚀 Developer Bio Page
+# Developer Bio
 
-A pure HTML5 and CSS3 personal bio and portfolio page built to demonstrate semantic markup and responsive design.[cite: 1, 2]
+Semantic HTML5 and CSS3 personal bio page for **Jishnu Bhabak**, built as a front-end fundamentals assignment. No frameworks, no build step — markup, accessibility, and responsive layout only.
 
-## Badges
+[![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
+[![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
+[![License](https://img.shields.io/badge/license-unlicensed-lightgrey)](#license)
 
-## 📖 Project Overview
+**Live demo:** [bhabakjishnu.github.io/Developer-Bio](https://bhabakjishnu.github.io/Developer-Bio/)  
+**Source:** [github.com/bhabakjishnu/Developer-Bio](https://github.com/bhabakjishnu/Developer-Bio)
 
-This project is a personal developer biography page for Jishnu Bhabak, an aspiring web developer and computer science student from India.[cite: 1] It serves as a practical assignment to demonstrate proficiency in front-end fundamentals, specifically semantic HTML5 accessibility and document structure.[cite: 1] The objective is to provide a clean, accessible, and responsive personal portfolio to showcase qualifications, technical skills, and projects.[cite: 1]
+---
 
-## 🔗 Demo
+## Overview
 
-Live Demo: [LIVE_DEMO_URL]
+This site is a single-page developer biography: personal information, qualifications, a skills dashboard, project notes, and a contact form. The goal is to show production-minded HTML and CSS — semantic document structure, accessible form controls, and a mobile-first layout — without relying on JavaScript libraries or CSS frameworks.
 
-## ✨ Features
+## Features
 
-* **Semantic Structure**: Built entirely with pure HTML5 semantic tags for optimal document structure.[cite: 1]
-* **Technical Skills Dashboard**: Utilizes native `<meter>` tags to display technical proficiencies visually.[cite: 1]
-* **Learning Progress Tracker**: Incorporates a native `<progress>` element to visualize learning milestones.[cite: 1]
-* **Responsive UI**: Fully responsive layout adapting to mobile, tablet, and desktop screens.[cite: 2]
-* **Contact Form**: Integrated functional contact form pointing to a Formspree endpoint.[cite: 1]
-* **Custom Theming**: Uses CSS variables for consistent color palettes and easy theme management.[cite: 2]
+- Semantic landmarks (`header`, `nav`, `main`, `section`, `article`-adjacent patterns, `figure`, `footer`, `address`)
+- Native `<meter>` skill ratings and a `<progress>` learning tracker
+- Responsive layout with Flexbox, CSS Grid, and a `600px` breakpoint
+- Theme tokens via CSS custom properties in `assets/css/style.css`
+- Contact form wired for [Formspree](https://formspree.io/) (endpoint must be replaced before use)
+- Profile image fallback to [UI Avatars](https://ui-avatars.com/) if the local photo fails to load
 
-## 📸 Project Preview
+## Tech stack
 
-*(Please add project screenshots here)*
+| Layer | Choice | Role |
+| --- | --- | --- |
+| Markup | HTML5 | Document structure, forms, tables, native widgets |
+| Style | CSS3 | Layout, theming, sticky header, media queries |
+| Forms | Formspree | Serverless POST handling for the contact form |
+| Hosting | GitHub Pages (static) | Optional public demo |
 
-## 💻 Tech Stack
-
-| Technology | Purpose |
-| --- | --- |
-| HTML5 | Semantic structure, accessibility, and content organization[cite: 1] |
-| CSS3 | Styling, responsive layouts, and custom design variables[cite: 2] |
-
-## 📂 Project Structure
+## Project structure
 
 ```text
-DEVELOPER-BIO/
-│
-├── .vscode/
-│   └── settings.json
+Developer-Bio/
 ├── assets/
 │   ├── css/
 │   │   └── style.css
 │   └── images/
 │       └── Profile.jpg
-└── index.html
-
+├── index.html
+└── README.md
 ```
 
-## 🛠️ Installation
+## Getting started
 
-1. Clone the repository:
+Clone and open the page locally. There are no npm packages or compilers.
+
 ```bash
-git clone [REPOSITORY_URL]
-
+git clone https://github.com/bhabakjishnu/Developer-Bio.git
+cd Developer-Bio
 ```
 
+Open `index.html` in a browser, or serve the folder so relative assets always resolve:
 
-2. Navigate to the project directory:
 ```bash
-cd [PROJECT_FOLDER]
-
+npx --yes serve .
 ```
 
+Then visit the URL printed in the terminal (typically `http://localhost:3000`).
 
+## Configuration
 
-*No external dependencies or package installations are required.*
+The contact form posts to a Formspree placeholder. Replace it with your form ID before collecting real submissions.
 
-## 🚀 Usage
+In `index.html`, find:
 
-Since this is a static website, you can run it directly in your browser:
+```html
+<form action="https://formspree.io/f/your_endpoint_here" method="post" class="contact-form">
+```
 
-1. Open the project folder on your local machine.
-2. Double-click on `index.html` to open it in your default web browser.[cite: 1]
+Swap `your_endpoint_here` for the ID from your Formspree dashboard.
 
-## ⚙️ Configuration
+Theme colors, type, and radii live in `:root` at the top of `assets/css/style.css`. Change those custom properties to restyle the page without hunting through selectors.
 
-The contact form uses Formspree for handling form submissions.[cite: 1] To configure it for your own use:
+## Accessibility
 
-1. Open `index.html`.[cite: 1]
-2. Locate the `<form>` tag in the Contact section.[cite: 1]
-3. Replace the `action` attribute `[https://formspree.io/f/your_endpoint_here](https://formspree.io/f/your_endpoint_here)` with your actual Formspree endpoint URL.[cite: 1]
+- Landmarks and labelled sections (`aria-label`, `aria-labelledby`)
+- Associated `<label>` elements on form fields, meters, and progress
+- Table `caption`, `scope`, and `th` for the qualifications table
+- Descriptive `alt` on the profile image
+- High-contrast text (`#343a40` on `#ffffff`) and visible focus/hover on navigation and buttons
 
-## 🧠 Key Concepts / Learning Outcomes
+## Browser support
 
-* **Semantic HTML**: Proper utilization of structural tags like `<header>`, `<nav>`, `<main>`, `<section>`, `<article>`, `<figure>`, `<meter>`, and `<progress>`.[cite: 1]
-* **CSS Architecture**: Implementation of CSS Variables (Custom Properties) to create a scalable, easily modifiable theme configuration.[cite: 2]
-* **Responsive Layouts**: Application of CSS Grid and Flexbox for fluid, mobile-first design without relying on heavy frameworks.[cite: 2]
+Chrome, Firefox, Edge, and Safari (current stable versions). Layout uses widely supported Flexbox, Grid, custom properties, `<meter>`, and `<progress>`.
 
-## 📱 Responsive Design
+## Roadmap
 
-This project is fully responsive and supports:
+- Dark-mode toggle
+- Dedicated project pages
+- Light JavaScript for form feedback and UI polish
 
-* Mobile
-* Tablet
-* Desktop
+## Contributing
 
-Responsive techniques utilized:
-
-* **Flexbox**: Used for the navigation bar, profile figure alignment, and form actions.[cite: 2]
-* **CSS Grid**: Implemented in the "Personal Information" section (`.info-grid`) with `auto-fit` and `minmax` to automatically wrap and fit content columns.[cite: 2]
-* **Media Queries**: Used to adjust flex directions, remove complex paddings, and center text for screens under `600px` wide.[cite: 2]
-* **Fluid Layouts**: The main container utilizes percentage-based widths (`92%`) constrained by a `max-width` to prevent content from touching screen edges on smaller devices.[cite: 2]
-
-## ♿ Accessibility
-
-* **Semantic Elements**: Ensures screen readers can easily interpret the page hierarchy.[cite: 1]
-* **ARIA Labels**: Utilizes `aria-label` and `aria-labelledby` attributes on navigations and sections for improved screen-reader context.[cite: 1]
-* **Alt Text**: Descriptive text is provided for the profile image.[cite: 1]
-* **Color Contrast**: The color palette applies high-contrast combinations (e.g., `#343a40` dark text on `#ffffff` white backgrounds) to ensure readability.[cite: 2]
-
-## 🌐 Browser Compatibility
-
-* Google Chrome
-* Mozilla Firefox
-* Microsoft Edge
-* Safari
-
-## ⚡ Performance
-
-* **Zero Dependencies**: Relies completely on vanilla HTML and CSS, minimizing browser processing and load times.[cite: 1, 2]
-* **System Fonts**: Uses standard OS fonts (`'Segoe UI', Roboto, Helvetica, Arial, sans-serif`) to eliminate the latency of external font loading.[cite: 2]
-* **Image Fallbacks**: Implements a lightweight `onerror` attribute to gracefully load a UI-Avatars placeholder if the local profile image fails.[cite: 1]
-
-## 🧪 Testing
-
-No automated testing framework is currently implemented for this static HTML/CSS project.
-
-## 🐛 Known Issues
-
-No known issues at this time.
-
-## 🔮 Future Improvements
-
-* JavaScript functionality for dynamic UI elements
-* Dark mode theme toggle
-* Additional sub-pages for detailed portfolio projects
-
-## 🤝 Contributing
+This is a personal portfolio assignment, but improvements are welcome.
 
 1. Fork the repository
-2. Clone your fork (`git clone [YOUR_FORK_URL]`)
-3. Create a feature branch (`git checkout -b feature/your-feature`)
-4. Commit your changes (`git commit -m "feat: add your feature"`)
-5. Push to the branch (`git push origin feature/your-feature`)
-6. Open a Pull Request
+2. Create a branch: `git checkout -b feat/short-description`
+3. Commit with a conventional prefix (`feat:`, `fix:`, `docs:`, `style:`, `refactor:`, `chore:`)
+4. Open a pull request against `main`
 
-## 📝 Commit Convention
+## License
 
-This project prefers conventional commit prefixes:
+No license file is published. The code is provided for learning and portfolio use. Ask before redistributing.
 
-* `feat:` — New feature
-* `fix:` — Bug fix
-* `docs:` — Documentation
-* `style:` — Styling
-* `refactor:` — Code refactoring
-* `chore:` — Maintenance
+## Author
 
-## 📄 License
+**Jishnu Bhabak** — aspiring web developer, India
 
-This project is licensed under the [LICENSE] License.
-
-## 👤 Author
-
-**Jishnu Bhabak**[cite: 1]
-
-* GitHub: [GITHUB_USERNAME]
-* LinkedIn: [LINKEDIN_URL]
-* Portfolio: [PORTFOLIO_URL]
-
-## 🙏 Acknowledgements
-
-* [UI Avatars](https://www.google.com/search?q=https://ui-avatars.com/) for dynamic placeholder image generation.[cite: 1]
-* [Formspree](https://www.google.com/search?q=https://formspree.io/) for providing backend-free form endpoint handling.[cite: 1]
-
-## 💬 Contact
-
+- GitHub: [bhabakjishnu](https://github.com/bhabakjishnu)
+- Email: [bhabakjishnu2004@gmail.com](mailto:bhabakjishnu2004@gmail.com)
 
 ---
 
-*If you found this project useful, consider giving it a ⭐ on GitHub.*
+If this project was useful, star the repository on GitHub.
