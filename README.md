@@ -229,31 +229,31 @@ The document is organized strictly around semantic HTML landmarks to ensure clea
 
 ```mermaid
 graph TD
-    HTML[html lang='en'] --> HEAD[head: Metadata & Stylesheet]
-    HTML --> BODY[body]
+    HTML["html lang='en'"] --> HEAD["head: Metadata & Stylesheet"]
+    HTML --> BODY["body"]
 
-    BODY --> HEADER[header.bio-header: Sticky Navigation]
-    HEADER --> BRAND[div.header-brand: 'JB.']
-    HEADER --> NAV[nav.main-nav aria-label='Main Navigation']
-    NAV --> LINKS[ul: Home | About | Qualifications | Projects | Contact]
+    BODY --> HEADER["header.bio-header: Sticky Navigation"]
+    HEADER --> BRAND["div.header-brand: 'JB.'"]
+    HEADER --> NAV["nav.main-nav aria-label='Main Navigation'"]
+    NAV --> LINKS["ul: Home | About | Qualifications | Projects | Contact"]
 
-    BODY --> CONTAINER[div.bio-container id='home']
+    BODY --> CONTAINER["div.bio-container id='home'"]
     
-    CONTAINER --> PHEADER[div.profile-header: Profile Banner]
-    PHEADER --> TITLE[h1.header-title: Developer Bio]
-    PHEADER --> FIGURE[figure.profile-figure: Image & Caption]
+    CONTAINER --> PHEADER["div.profile-header: Profile Banner"]
+    PHEADER --> TITLE["h1.header-title: Developer Bio"]
+    PHEADER --> FIGURE["figure.profile-figure: Image & Caption"]
 
-    CONTAINER --> MAIN[main.main-content: Primary Content]
-    MAIN --> S_ABOUT[section#about: Personal Information]
-    MAIN --> S_QUAL[section#qualifications: Qualifications Table]
-    MAIN --> S_SKILLS[section#skills: Technical Skills Dashboard]
-    MAIN --> S_PROJ[section#projects: Project Showcase]
-    MAIN --> S_CONTACT[section#contact: Contact Form]
-    MAIN --> S_TRACK[section.tracker-section: Learning Progress]
+    CONTAINER --> MAIN["main.main-content: Primary Content"]
+    MAIN --> S_ABOUT["section#about: Personal Information"]
+    MAIN --> S_QUAL["section#qualifications: Qualifications Table"]
+    MAIN --> S_SKILLS["section#skills: Technical Skills Dashboard"]
+    MAIN --> S_PROJ["section#projects: Project Showcase"]
+    MAIN --> S_CONTACT["section#contact: Contact Form"]
+    MAIN --> S_TRACK["section.tracker-section: Learning Progress"]
 
-    CONTAINER --> FOOTER[footer.bio-footer: Closing Landmark]
-    FOOTER --> ADDR[address.contact-info: Phone & Email]
-    FOOTER --> COPY[p.copyright: Attribution]
+    CONTAINER --> FOOTER["footer.bio-footer: Closing Landmark"]
+    FOOTER --> ADDR["address.contact-info: Phone & Email"]
+    FOOTER --> COPY["p.copyright: Attribution"]
 ```
 
 ### Design System Tokens
