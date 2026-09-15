@@ -14,6 +14,7 @@ A clean, accessible, single-page developer biography and portfolio built with pu
 
 - [Overview](#overview)
 - [Features](#features)
+- [Screenshots](#screenshots)
 - [Tech Stack](#tech-stack)
 - [Project Structure](#project-structure)
 - [Getting Started](#getting-started)
@@ -61,6 +62,22 @@ The project demonstrates foundational front-end craftsmanship without external J
 
 ---
 
+<a id="screenshots"></a>
+## 📸 Screenshots
+
+### Desktop View
+The full desktop layout featuring the sticky navigation, dark hero profile banner, personal information grid, qualifications data table, technical skills dashboard, project drawers, contact form, and learning tracker:
+
+![Developer Bio Desktop View](./assets/screenshots/desktop.png)
+
+### Responsive Previews
+
+| Tablet View (768px) | Mobile View (480px) |
+| :---: | :---: |
+| <img src="./assets/screenshots/tablet.png" alt="Developer Bio Tablet View" width="450" /> | <img src="./assets/screenshots/mobile.png" alt="Developer Bio Mobile View" width="300" /> |
+
+---
+
 ## Tech Stack
 
 - **HTML5:** Semantic document outline, native form controls, and data presentation widgets (`<meter>`, `<progress>`, `<details>`).
@@ -83,8 +100,12 @@ Developer-Bio/
 ├── assets/
 │   ├── css/
 │   │   └── style.css        # Centralized stylesheet (tokens, reset, layout, components, media queries)
-│   └── images/
-│       └── Profile.jpg      # Developer portrait image asset
+│   ├── images/
+│   │   └── Profile.jpg      # Developer portrait image asset
+│   └── screenshots/
+│       ├── desktop.png      # Full desktop viewport preview
+│       ├── tablet.png       # Tablet responsive preview
+│       └── mobile.png       # Mobile responsive preview
 ├── index.html               # Main semantic HTML5 single-page application
 └── README.md                # Project documentation
 ```
@@ -94,6 +115,7 @@ Developer-Bio/
 - **`index.html`**: Contains the full semantic document structure, including the sticky navigation, profile hero, personal info grid, qualifications table, skills dashboard, project drawers, contact form, learning tracker, and footer.
 - **`assets/css/style.css`**: Defines all CSS variables, typography, layout grids, component styling, hover transitions, and responsive breakpoint rules.
 - **`assets/images/Profile.jpg`**: Local image asset displayed in the profile section.
+- **`assets/screenshots/`**: Repository visual assets featuring actual desktop, tablet, and mobile interface captures.
 - **`.vscode/settings.json`**: Pre-configures the local Live Server extension port to `5501`.
 
 ---
