@@ -1,7 +1,7 @@
 /* ==========================================================================
    CSS Variables (Theme & Configuration)
    ========================================================================== */
-   :root {
+:root {
     /* Color Palette */
     --bg-body: #e9ecef;
     --bg-container: #ffffff;
@@ -19,7 +19,7 @@
 
     /* Typography */
     --font-stack: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-    
+
     /* Spacing & Layout */
     --border-radius-lg: 12px;
     --border-radius-md: 8px;
@@ -35,7 +35,9 @@ html {
     scroll-behavior: smooth;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
 }
 
@@ -85,7 +87,7 @@ body {
     transition: color 0.2s ease;
 }
 
-.main-nav a:hover, 
+.main-nav a:hover,
 .main-nav a:focus {
     color: var(--accent);
 }
@@ -95,12 +97,14 @@ body {
    ========================================================================== */
 .bio-container {
     max-width: 800px;
-    width: 92%; /* Keeps container from touching screen edges on mobile */
+    width: 92%;
+    /* Keeps container from touching screen edges on mobile */
     margin: 40px auto;
     background-color: var(--bg-container);
     border-radius: var(--border-radius-lg);
     box-shadow: var(--shadow-md);
-    overflow: hidden; /* Ensures child elements (like the full-bleed header/footer) follow the border radius */
+    overflow: hidden;
+    /* Ensures child elements (like the full-bleed header/footer) follow the border radius */
 }
 
 /* ==========================================================================
@@ -108,11 +112,14 @@ body {
    ========================================================================== */
 .profile-header {
     text-align: center;
-    background-color: var(--primary-dark); /* Matches the footer background */
+    background-color: var(--primary-dark);
+    /* Matches the footer background */
     padding: 40px 20px;
-    margin-bottom: 0; 
-    border-bottom: none; /* Removed the light border for a cleaner look */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15); /* Slightly stronger shadow */
+    margin-bottom: 0;
+    border-bottom: none;
+    /* Removed the light border for a cleaner look */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    /* Slightly stronger shadow */
 }
 
 .profile-header .header-title {
@@ -120,7 +127,8 @@ body {
     font-size: 2.2em;
     font-weight: 700;
     letter-spacing: 1px;
-    color: var(--text-light); /* Changed to light text for contrast */
+    color: var(--text-light);
+    /* Changed to light text for contrast */
 }
 
 .profile-header .profile-figure {
@@ -132,7 +140,8 @@ body {
 
 .profile-img {
     border-radius: 50%;
-    border: 4px solid var(--bg-container); /* Keeps the white ring around your photo */
+    border: 4px solid var(--bg-container);
+    /* Keeps the white ring around your photo */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
     object-fit: cover;
     background-color: var(--bg-body);
@@ -141,12 +150,14 @@ body {
 .profile-caption {
     margin-top: 15px;
     font-size: 1.1em;
-    color: var(--primary-light); /* Lighter muted text, matching footer text */
+    color: var(--primary-light);
+    /* Lighter muted text, matching footer text */
 }
 
 .profile-name {
     font-size: 1.3em;
-    color: var(--bg-container); /* Bright white text for your name */
+    color: var(--bg-container);
+    /* Bright white text for your name */
 }
 
 /* ==========================================================================
@@ -158,7 +169,8 @@ body {
 
 .bio-section {
     margin-bottom: 45px;
-    scroll-margin-top: 80px; /* Accounts for sticky header when jumping to sections */
+    scroll-margin-top: 80px;
+    /* Accounts for sticky header when jumping to sections */
 }
 
 /* ==========================================================================
@@ -239,7 +251,7 @@ body {
     text-align: left;
 }
 
-.data-table th, 
+.data-table th,
 .data-table td {
     padding: 12px 15px;
     border-bottom: 1px solid var(--border-color);
@@ -333,7 +345,7 @@ body {
     color: var(--primary-dark);
 }
 
-.form-group input, 
+.form-group input,
 .form-group textarea {
     width: 100%;
     padding: 12px;
@@ -343,7 +355,7 @@ body {
     transition: border-color 0.3s, box-shadow 0.3s;
 }
 
-.form-group input:focus, 
+.form-group input:focus,
 .form-group textarea:focus {
     outline: none;
     border-color: var(--primary-light);
@@ -372,7 +384,7 @@ body {
 
 .btn:hover {
     transform: translateY(-1px);
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .btn-primary {
@@ -482,48 +494,49 @@ body {
         gap: 15px;
         padding: 20px;
     }
-    
+
     .main-nav ul {
         flex-wrap: wrap;
         justify-content: center;
     }
-    
+
     .bio-container {
         margin: 20px auto;
     }
-    
+
     .profile-header {
-        padding: 30px 15px; /* Ensures text has room to breathe on mobile */
+        padding: 30px 15px;
+        /* Ensures text has room to breathe on mobile */
     }
 
     .main-content {
         padding: 20px;
     }
-    
+
     .info-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .skill-item {
         flex-direction: column;
         align-items: flex-start;
         gap: 5px;
     }
-    
-    .skill-item meter, 
+
+    .skill-item meter,
     .skill-item label {
         width: 100%;
     }
-    
+
     .tracker-bar {
         flex-direction: column;
         gap: 5px;
     }
-    
+
     .tracker-bar progress {
         width: 100%;
     }
-    
+
     .contact-info {
         flex-direction: column;
         gap: 10px;
