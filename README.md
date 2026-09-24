@@ -1,6 +1,6 @@
 # Developer Bio
 
-A clean, accessible, single-page developer biography and portfolio built with pure semantic HTML5 and modern vanilla CSS3.
+A lightweight, accessible, single-page personal biography and portfolio interface built with semantic HTML5 and vanilla CSS3.
 
 [![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
 [![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
@@ -12,128 +12,169 @@ A clean, accessible, single-page developer biography and portfolio built with pu
 
 ## Table of Contents
 
-- [Overview](#overview)
-- [Features](#features)
-- [Screenshots](#screenshots)
-- [Tech Stack](#tech-stack)
+- [Project Overview](#project-overview)
+- [Key Features](#key-features)
+- [Desktop Preview](#desktop-preview)
+- [Architecture & Data Flow](#architecture--data-flow)
 - [Project Structure](#project-structure)
-- [Getting Started](#getting-started)
+- [Tech Stack](#tech-stack)
+- [Installation & Local Setup](#installation--local-setup)
+- [Configuration & Customization](#configuration--customization)
 - [Usage](#usage)
-- [Configuration and Customization](#configuration-and-customization)
-- [Design and Architecture](#design-and-architecture)
-- [Responsive Design](#responsive-design)
+- [Security & Privacy Audit](#security--privacy-audit)
+- [Security Improvement Plan](#security-improvement-plan)
+- [Project Analysis](#project-analysis)
 - [Accessibility](#accessibility)
-- [Browser Support](#browser-support)
-- [Learning Objectives](#learning-objectives)
-- [Deployment and Live Demo](#deployment-and-live-demo)
+- [Performance](#performance)
+- [Browser Compatibility](#browser-compatibility)
 - [Future Improvements](#future-improvements)
 - [Contributing](#contributing)
 - [License](#license)
-- [Author](#author)
+- [Author & Contact](#author--contact)
+- [Disclaimer](#disclaimer)
 
 ---
 
-## Overview
+## Project Overview
 
-**Developer Bio** is a lightweight, responsive, single-page developer profile built for **Jishnu Bhabak**, a Computer Science student and aspiring web developer from India.
+**Developer Bio** is a single-page responsive developer profile for **Jishnu Bhabak**, a Computer Science student and front-end developer from India.
 
-The project demonstrates foundational front-end craftsmanship without external JavaScript runtimes, CSS frameworks, or compilation toolchains. It solves the need for a lean, fast-loading, and easily customizable personal bio page while serving as a practical reference for semantic HTML5 structure, modern CSS layout techniques (Flexbox and Grid), and accessible web practices.
+The project demonstrates modern web fundamentals without external JavaScript libraries, heavy front-end frameworks, or complex build pipelines. It functions as both a production-ready personal profile and an architectural case study in pure semantic HTML5 landmark structure, native interactive browser elements, and CSS custom property design tokens.
 
-### Intended Audience
+### Target Audiences
 
-- **Recruiters and Peers:** To review the developer's background, core competencies, qualifications, and contact channels.
-- **Front-End Learners:** To explore clean semantic document structures, native HTML5 interactive widgets, and pure CSS layout patterns.
-
----
-
-## Features
-
-- **Semantic HTML5 Landmarks:** Structured using `<header>`, `<nav>`, `<main>`, `<section>`, `<figure>`, `<figcaption>`, `<dl>`, `<form>`, `<address>`, and `<footer>` elements for meaningful document hierarchy.
-- **Native Interactive Widgets:** 
-  - Zero-JavaScript project accordion powered by native `<details>` and `<summary>` elements.
-  - Interactive skill ratings rendered via native `<meter>` tags with defined minimum, maximum, and optimum thresholds.
-  - Overall learning progress displayed using a native `<progress>` bar.
-- **Modern CSS Layouts:** Combines CSS Grid (`repeat(auto-fit, minmax(200px, 1fr))`) for the personal information grid with Flexbox for sticky navigation, header identity, form controls, and footer alignment.
-- **Sticky Navigation Bar:** Top navigation bar (`position: sticky`) with smooth anchor scrolling (`scroll-behavior: smooth`) and target compensation (`scroll-margin-top: 80px`) to prevent header overlap.
-- **Centralized Design Tokens:** Complete visual theming managed via CSS Custom Properties (`:root`), decoupling styles from structure and allowing effortless theme changes.
-- **Accessible Data Presentation:** Tabular data formatted with a descriptive `<caption>` alongside explicit column and row header scopes (`scope="col"`, `scope="row"`).
-- **Serverless Form Ready:** Built-in contact form pre-configured for [Formspree](https://formspree.io/) submission, complete with HTML5 validation, `autocomplete` attributes, and a form reset control.
-- **Resilient Asset Fallback:** Profile portrait includes an inline `onerror` fallback that automatically requests a dynamic avatar from [UI Avatars](https://ui-avatars.com/) if the local image fails to load.
+- **Technical Recruiters & Hiring Managers:** Quickly review candidate competencies, educational background, achievements, and verified contact channels.
+- **Code Reviewers & Peers:** Inspect semantic markup standards, accessible table formatting, and responsive CSS Grid/Flexbox implementations.
+- **Front-End Learners:** Study native browser interactivity (`<details>`, `<meter>`, `<progress>`) operating entirely without client-side JavaScript.
 
 ---
 
-<a id="screenshots"></a>
-## 📸 Screenshots
+## Key Features
 
-### Desktop View
-The full desktop layout featuring the sticky navigation, dark hero profile banner, personal information grid, qualifications data table, technical skills dashboard, project drawers, contact form, and learning tracker:
-
-![Developer Bio Desktop View](./assets/screenshots/desktop.png)
-
-### Responsive Previews
-
-| Tablet View (768px) | Mobile View (480px) |
-| :---: | :---: |
-| <img src="./assets/screenshots/tablet.png" alt="Developer Bio Tablet View" width="450" /> | <img src="./assets/screenshots/mobile.png" alt="Developer Bio Mobile View" width="300" /> |
+- **Semantic Landmark Architecture:** Structured around standard HTML5 landmarks (`<header>`, `<nav>`, `<main>`, `<section>`, `<figure>`, `<figcaption>`, `<dl>`, `<form>`, `<address>`, `<footer>`) ensuring a clean document object model and optimal screen reader navigation.
+- **Native Browser Interactivity (Zero JavaScript):**
+  - **Accordion Project Drawers:** Collapsible project details rendered natively using `<details>` and `<summary>` elements.
+  - **Skills Dashboard:** Quantitative skill gauges rendered with semantic `<meter>` elements containing min, max, low, high, and optimum thresholds.
+  - **Learning Tracker:** Visual completion percentage presented via native `<progress>` elements.
+- **Responsive Layout Engine:** Combines two-dimensional CSS Grid (`repeat(auto-fit, minmax(200px, 1fr))`) for fluid card grids with Flexbox for sticky navigation, profile alignment, and form controls.
+- **Sticky Navigation Bar:** Top navigation bar (`position: sticky`) featuring smooth anchor scrolling (`scroll-behavior: smooth`) paired with `scroll-margin-top: 80px` to eliminate header occlusion on anchor jumps.
+- **Centralized Design System:** All colors, surface elevations, borders, and typography variables managed centrally in `:root` via CSS Custom Properties.
+- **Accessible Tabular Data:** Competition qualifications displayed in a semantic table featuring a descriptive `<caption>` alongside explicit `scope="col"` and `scope="row"` headers.
+- **Serverless Form Ready:** Contact form configured for [Formspree](https://formspree.io/) submission with native HTML5 input validation and autocomplete attributes.
+- **Resilient Fallback Avatar:** Profile image includes an inline `onerror` fallback that requests an avatar from [UI Avatars](https://ui-avatars.com/) if the local portrait asset fails to load.
 
 ---
 
-## Tech Stack
+## Desktop Preview
 
-- **HTML5:** Semantic document outline, native form controls, and data presentation widgets (`<meter>`, `<progress>`, `<details>`).
-- **CSS3:** Custom properties (design tokens), Flexbox, CSS Grid, media queries, and transition effects.
-- **Third-Party Services:**
-  - [Formspree](https://formspree.io/) — Form endpoint handling (configurable).
-  - [UI Avatars](https://ui-avatars.com/) — Remote fallback avatar generation.
-- **Development Tools:**
-  - Git & GitHub — Version control and repository hosting.
-  - VS Code — Code editing with Live Server integration (port `5501`).
+<p align="center">
+  <img src="./assets/screenshots/desktop.png" alt="Developer Bio Desktop Preview" width="100%">
+</p>
+
+---
+
+## Architecture & Data Flow
+
+The application executes entirely within the client browser runtime as a static document, interacting with external web services strictly via declarative HTML attributes.
+
+```mermaid
+flowchart TD
+    subgraph ClientBrowser["Client Browser Runtime"]
+        User["User / Screen Reader"] --> Nav["Sticky Header Navigation (Anchor Links)"]
+        Nav --> Sections["Semantic Document Landmarks"]
+        
+        subgraph DOMStructure["DOM Tree (index.html)"]
+            Sections --> Hero["Profile Header (assets/images/Profile.jpg)"]
+            Sections --> About["Personal Information (CSS Grid & dl/dt/dd)"]
+            Sections --> Qual["Qualifications Table (scope=col / scope=row)"]
+            Sections --> Skills["Skills Dashboard (Native meter Elements)"]
+            Sections --> Projects["Project Accordion (Native details/summary)"]
+            Sections --> Contact["Contact Form (POST Action)"]
+            Sections --> Progress["Learning Tracker (Native progress Element)"]
+            Sections --> Footer["Footer Landmark (address & copyright)"]
+        end
+        
+        Styling["assets/css/style.css (Design Tokens & Breakpoints)"] -.-> DOMStructure
+    end
+
+    subgraph ExternalServices["External Endpoints"]
+        Hero -- "Image Load Error (onerror fallback)" --> UIAvatars["UI Avatars API (GET)"]
+        Contact -- "Form Submission (POST)" --> Formspree["Formspree Endpoint (POST)"]
+    end
+```
 
 ---
 
 ## Project Structure
 
+The repository structure reflects a static front-end deployment with planned modular stylesheet architecture:
+
 ```text
 Developer-Bio/
 ├── .vscode/
-│   └── settings.json        # Workspace settings (configured for Live Server port 5501)
+│   └── settings.json            # Editor settings (Live Server port: 5501)
 ├── assets/
 │   ├── css/
-│   │   └── style.css        # Centralized stylesheet (tokens, reset, layout, components, media queries)
+│   │   ├── base/                # Planned modular resets and typography
+│   │   │   ├── reset.css        # (0-byte placeholder)
+│   │   │   ├── typography.css   # (0-byte placeholder)
+│   │   │   └── variables.css    # (0-byte placeholder)
+│   │   ├── components/          # Planned modular component stylesheets
+│   │   │   ├── buttons.css      # (0-byte placeholder)
+│   │   │   ├── cards.css        # (0-byte placeholder)
+│   │   │   ├── forms.css        # (0-byte placeholder)
+│   │   │   ├── profile.css      # (0-byte placeholder)
+│   │   │   ├── skills.css       # (0-byte placeholder)
+│   │   │   └── table.css        # (0-byte placeholder)
+│   │   ├── layout/              # Planned modular layout stylesheets
+│   │   │   ├── container.css    # (0-byte placeholder)
+│   │   │   ├── footer.css       # (0-byte placeholder)
+│   │   │   ├── header.css       # (0-byte placeholder)
+│   │   │   ├── navigation.css   # (0-byte placeholder)
+│   │   │   └── sections.css     # (0-byte placeholder)
+│   │   ├── responsive/          # Planned responsive breakpoints
+│   │   │   └── mobile.css       # (0-byte placeholder)
+│   │   ├── states/              # Planned interactive states
+│   │   │   └── states.css       # (0-byte placeholder)
+│   │   ├── utilities/           # Planned helper utilities
+│   │   │   └── utilities.css    # (0-byte placeholder)
+│   │   └── style.css            # Active monolithic stylesheet (tokens, layout, components, queries)
 │   ├── images/
-│   │   └── Profile.jpg      # Developer portrait image asset
+│   │   └── Profile.jpg          # Local profile photograph
 │   └── screenshots/
-│       ├── desktop.png      # Full desktop viewport preview
-│       ├── tablet.png       # Tablet responsive preview
-│       └── mobile.png       # Mobile responsive preview
-├── index.html               # Main semantic HTML5 single-page application
-└── README.md                # Project documentation
+│       ├── desktop.png          # Primary desktop preview asset
+│       ├── mobile.png           # Mobile responsive capture
+│       └── tablet.png           # Tablet responsive capture
+├── .gitignore                   # Repository exclusion patterns (secrets, OS artifacts, logs)
+├── index.html                   # Core semantic single-page application
+└── README.md                    # Project documentation & audit report
 ```
 
-### File Breakdown
-
-- **`index.html`**: Contains the full semantic document structure, including the sticky navigation, profile hero, personal info grid, qualifications table, skills dashboard, project drawers, contact form, learning tracker, and footer.
-- **`assets/css/style.css`**: Defines all CSS variables, typography, layout grids, component styling, hover transitions, and responsive breakpoint rules.
-- **`assets/images/Profile.jpg`**: Local image asset displayed in the profile section.
-- **`assets/screenshots/`**: Repository visual assets featuring actual desktop, tablet, and mobile interface captures.
-- **`.vscode/settings.json`**: Pre-configures the local Live Server extension port to `5501`.
+> **Note on Stylesheet Structure:** The project currently bundles all production CSS rules into `assets/css/style.css` (544 lines). The subdirectories under `assets/css/` exist as scaffolding for a future modular CSS refactoring phase.
 
 ---
 
-## Getting Started
+## Tech Stack
 
-Because this project relies strictly on native browser technologies, no package manager, compiler, or build step is required.
+| Technology | Purpose | Implementation Details |
+| :--- | :--- | :--- |
+| **HTML5** | Document Structure & Semantics | Semantic landmarks, definition lists, `<meter>`, `<progress>`, `<details>`, native form attributes |
+| **CSS3** | Layout, Theming & Responsiveness | `:root` custom properties, Flexbox, CSS Grid (`minmax`, `auto-fit`), `@media (max-width: 600px)` |
+| **Formspree** | Contact Form Processing | Form submission handler via `https://formspree.io/f/your_endpoint_here` |
+| **UI Avatars** | Resilient Avatar Fallback | Remote HTTP avatar generator called via `onerror` attribute |
+| **VS Code Live Server** | Local Development Environment | Configured to serve workspace at port `5501` |
+| **Git** | Version Control | Source control management and history tracking |
+
+---
+
+## Installation & Local Setup
 
 ### Prerequisites
 
-- A modern web browser (such as Google Chrome, Mozilla Firefox, Microsoft Edge, or Safari).
-- [Git](https://git-scm.com/) installed on your machine (optional, for cloning).
+- A modern evergreen web browser (Chrome, Firefox, Safari, or Edge).
+- [Git](https://git-scm.com/) installed on your local workstation.
 
----
-
-## Installation
-
-Clone the repository to your local machine:
+### Clone the Repository
 
 ```bash
 git clone https://github.com/bhabakjishnu/Developer-Bio.git
@@ -144,279 +185,237 @@ cd Developer-Bio
 
 ## Usage
 
-You can run and preview the project using any of the following approaches:
+Because Developer Bio uses native web standards, no compilation, package installation, or build step is required. Run the application using any of the following approaches:
 
-### Method 1: Direct File Opening
+### Method 1: VS Code Live Server (Recommended)
 
-Open `index.html` directly in your default browser:
-
-- **Windows (PowerShell):**
-  ```powershell
-  Start-Process index.html
-  ```
-- **macOS:**
-  ```bash
-  open index.html
-  ```
-- **Linux:**
-  ```bash
-  xdg-open index.html
-  ```
-
-### Method 2: VS Code Live Server (Recommended)
-
-1. Open the project directory in Visual Studio Code:
+1. Open the repository root in Visual Studio Code:
    ```bash
    code .
    ```
-2. Install the **Live Server** extension by Ritwick Dey if not already installed.
+2. Install the **Live Server** extension (by Ritwick Dey).
 3. Click **"Go Live"** in the bottom status bar.
-4. The workspace configuration (`.vscode/settings.json`) automatically runs the local server at:
+4. VS Code opens the configured endpoint automatically:
    ```text
    http://localhost:5501/index.html
    ```
 
-### Method 3: Lightweight Command-Line Server
+### Method 2: Python HTTP Server
 
-If you prefer running a command-line HTTP server:
+If Python 3 is available in your shell:
 
-- **Python 3:**
-  ```bash
-  python -m http.server 5501
-  ```
-- **Node.js (`npx`):**
-  ```bash
-  npx --yes serve .
-  ```
+```bash
+python -m http.server 5501
+```
 
-Once started, open `http://localhost:5501` in your browser.
+Open `http://localhost:5501` in your browser.
+
+### Method 3: Direct File Access
+
+Open `index.html` directly from your file manager or shell:
+
+- **Windows (PowerShell):** `Start-Process index.html`
+- **macOS:** `open index.html`
+- **Linux:** `xdg-open index.html`
 
 ---
 
-## Configuration and Customization
+## Configuration & Customization
 
-### 1. Activating the Contact Form
+### 1. Connecting the Contact Form
 
-The contact form in `index.html` is ready for [Formspree](https://formspree.io/). To route messages to your own email:
+The form in `index.html` points to a placeholder Formspree endpoint:
 
-1. Register a free account at [formspree.io](https://formspree.io/).
-2. Create a new form and copy your unique endpoint ID (for example, `xpznjkgw`).
-3. In [index.html](file:///c:/Users/jishn/Desktop/Developer-Bio/index.html), locate line 135:
-   ```html
-   <form action="https://formspree.io/f/your_endpoint_here" method="post" class="contact-form">
-   ```
-4. Replace `your_endpoint_here` with your Formspree endpoint ID:
-   ```html
-   <form action="https://formspree.io/f/xpznjkgw" method="post" class="contact-form">
-   ```
+```html
+<form action="https://formspree.io/f/your_endpoint_here" method="post" class="contact-form">
+```
 
-### 2. Customizing Theme Tokens
+To enable live message forwarding:
+1. Create a free form at [formspree.io](https://formspree.io/).
+2. Copy your form ID (e.g., `xpznjkgw`).
+3. Replace `your_endpoint_here` with your Formspree endpoint ID in `index.html`.
 
-Colors, fonts, and spacing are defined as CSS variables at the top of [assets/css/style.css](file:///c:/Users/jishn/Desktop/Developer-Bio/assets/css/style.css) in the `:root` pseudo-class:
+### 2. Customizing Design Tokens
+
+Visual tokens are declared in the `:root` block of `assets/css/style.css`:
 
 ```css
 :root {
-    --primary-dark: #2b2d42;   /* Main dark tone for header, titles, and footer */
-    --primary-light: #8d99ae;  /* Muted slate for captions and secondary elements */
-    --accent: #d90429;         /* Vibrant accent color for borders and active links */
+    --primary-dark: #2b2d42;   /* Header, titles, footer */
+    --primary-light: #8d99ae;  /* Table headers, secondary buttons */
+    --accent: #d90429;         /* Brand accents, active links, primary CTA */
     --bg-body: #e9ecef;        /* Page background */
-    --bg-container: #ffffff;   /* Card / container surface */
-    --bg-card: #f8f9fa;        /* Subtle card and alternating row tint */
-    --text-main: #343a40;      /* Primary text color */
-    --text-muted: #495057;     /* Secondary text color */
+    --bg-container: #ffffff;   /* Main content surface */
+    --bg-card: #f8f9fa;        /* Card backgrounds, alternating rows */
+    --text-main: #343a40;      /* Primary body text */
+    --text-muted: #495057;     /* Secondary descriptions */
+    --text-light: #edf2f4;     /* Light text on dark surfaces */
 }
 ```
 
-Updating any of these variables immediately propagates across the entire page.
-
-### 3. Updating Profile Information and Image
-
-- **Replace Avatar:** Replace `assets/images/Profile.jpg` with your own image file (keeping the same name), or update the `src` attribute in `index.html`.
-- **Update Avatar Fallback:** In `index.html`, modify the `onerror` query parameter in the `<img>` tag to match your name:
-  ```html
-  <img src="assets/images/Profile.jpg" 
-       alt="Portrait photo of Jishnu Bhabak" 
-       onerror="this.src='https://ui-avatars.com/api/?name=Your+Name&size=150&background=2b2d42&color=fff'" 
-       height="150" width="150" class="profile-img">
-  ```
-- **Update Details:** Modify personal data, competition ranks, and skill ratings inside the respective `<section>` elements in `index.html`.
+Updating these variables automatically cascades across all components.
 
 ---
 
-## Design and Architecture
+## Security & Privacy Audit
 
-### Document Outline (DOM Hierarchy)
+A comprehensive security, privacy, and repository hygiene audit was conducted across the codebase.
 
-The document is organized strictly around semantic HTML landmarks to ensure clean document traversal for screen readers and search engines:
+### Audit Summary Matrix
 
-```mermaid
-graph TD
-    HTML["html lang='en'"] --> HEAD["head: Metadata & Stylesheet"]
-    HTML --> BODY["body"]
+| Area | Finding | Severity | Status | Remediation & Recommendation |
+| :--- | :--- | :--- | :--- | :--- |
+| **Personally Identifiable Information (PII)** | Direct personal phone number exposed in `index.html` footer and `README.md`. | **High** | **Resolved** | Completely excised personal telephone number from `index.html` and `README.md`. No placeholder substituted. Professional email retained. |
+| **Git Commit History** | Historical Git commit objects (`6eb3037`, `04a1958`, etc.) contain previously committed phone numbers. | **Medium** | **Documented** | Deleting working tree files does not alter Git packfiles. Recommend scrubbing history with `git-filter-repo` or BFG if repository is made publicly indexable. |
+| **Repository Hygiene & Secret Prevention** | `.gitignore` file was present but 0 bytes (empty), leaving repo vulnerable to accidental credential commits. | **Medium** | **Resolved** | Populated `.gitignore` with rules for `.env`, credentials, OS artifacts (`.DS_Store`, `Thumbs.db`), logs, and editor caches. |
+| **Hardcoded Secrets & API Keys** | Codebase inspected for private API keys, database credentials, OAuth tokens, and `.env` files. | **Low** | **Verified Clean** | No active secrets or sensitive API credentials detected in tracked repository files. |
+| **Client-Side Scripting & XSS** | Inline `onerror` handler in `index.html` (`onerror="this.src='https://ui-avatars.com/...'"`). | **Low** | **Documented** | Inline handler requires `'unsafe-inline'` if strict Content Security Policy is enforced. Recommend migrating to pure HTML `<picture>` or local SVG fallback. |
+| **Third-Party Data Exposure** | Dynamic avatar requests to external third-party domain (`ui-avatars.com`). | **Low** | **Documented** | External avatar generator exposes visitor IP and referrer headers to third-party server during fallback triggers. Recommend bundling a local default avatar. |
+| **Form Abuse & Bot Protection** | Formspree form submission endpoint lacks automated bot throttling or honeypot fields. | **Low** | **Documented** | Formspree endpoint exposed in client HTML. Recommend configuring Formspree domain allowlists and adding a hidden honeypot field (`_gotcha`). |
+| **Dependency Security** | Third-party npm dependencies or runtime script bundles. | **Informational** | **Verified Clean** | Project has zero npm packages, zero external JavaScript bundles, and zero third-party script vulnerabilities. |
 
-    BODY --> HEADER["header.bio-header: Sticky Navigation"]
-    HEADER --> BRAND["div.header-brand: 'JB.'"]
-    HEADER --> NAV["nav.main-nav aria-label='Main Navigation'"]
-    NAV --> LINKS["ul: Home | About | Qualifications | Projects | Contact"]
+---
 
-    BODY --> CONTAINER["div.bio-container id='home'"]
-    
-    CONTAINER --> PHEADER["div.profile-header: Profile Banner"]
-    PHEADER --> TITLE["h1.header-title: Developer Bio"]
-    PHEADER --> FIGURE["figure.profile-figure: Image & Caption"]
+## Security Improvement Plan
 
-    CONTAINER --> MAIN["main.main-content: Primary Content"]
-    MAIN --> S_ABOUT["section#about: Personal Information"]
-    MAIN --> S_QUAL["section#qualifications: Qualifications Table"]
-    MAIN --> S_SKILLS["section#skills: Technical Skills Dashboard"]
-    MAIN --> S_PROJ["section#projects: Project Showcase"]
-    MAIN --> S_CONTACT["section#contact: Contact Form"]
-    MAIN --> S_TRACK["section.tracker-section: Learning Progress"]
+The prioritized security improvement roadmap establishes defensive controls without impacting current static site functionality:
 
-    CONTAINER --> FOOTER["footer.bio-footer: Closing Landmark"]
-    FOOTER --> ADDR["address.contact-info: Phone & Email"]
-    FOOTER --> COPY["p.copyright: Attribution"]
+```text
+Immediate (Completed)
+    ├── Remove exposed telephone numbers from tracked source
+    └── Populate .gitignore to prevent accidental credential leakage
+            │
+            ▼
+Short-Term (Next Milestone)
+    ├── Replace inline onerror avatar script with local SVG fallback
+    ├── Introduce Content Security Policy (CSP) <meta> tag
+    └── Add Formspree honeypot field (_gotcha) and domain restrictions
+            │
+            ▼
+Long-Term (Production Hardening)
+    ├── Scrub historical Git commits via git-filter-repo / BFG
+    ├── Implement automated secret scanning in CI (Gitleaks / Trufflehog)
+    └── Configure Subresource Integrity (SRI) if external CDN assets are added
 ```
 
-### Design System Tokens
+### Action Items Breakdown
 
-| Token | Value | Applied To |
+1. **Immediate (Completed):**
+   - Removed telephone contact link from `index.html`.
+   - Removed telephone contact entry from `README.md`.
+   - Established `.gitignore` baseline blocking `.env`, `*.pem`, `*.key`, `credentials.json`, OS metadata, and log files.
+2. **Short-Term (Recommended):**
+   - Add a Content Security Policy `<meta>` tag to `<head>`:
+     ```html
+     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https://ui-avatars.com; form-action https://formspree.io;">
+     ```
+   - Add a hidden honeypot field to the contact form to deter automated spam scrapers:
+     ```html
+     <input type="text" name="_gotcha" style="display:none !important" tabindex="-1" autocomplete="off">
+     ```
+3. **Long-Term (Production Hardening):**
+   - Run `git-filter-repo --replace-text` to scrub historical phone number occurrences from Git object database before public promotion.
+   - Establish GitHub Actions workflow with secret detection tooling to block future accidental credential commits.
+
+---
+
+## Project Analysis
+
+### Architecture & Modularity
+
+- **Current State:** The production layout relies on an all-in-one stylesheet `assets/css/style.css`.
+- **Strengths:** Eliminates multiple render-blocking HTTP requests, simplifying local testing and static hosting.
+- **Architectural Scaffolding:** The repository contains an organized directory structure under `assets/css/` (`base/`, `components/`, `layout/`, `responsive/`, `states/`, `utilities/`). These files are currently empty placeholders. Future iterations can split the monolithic file into modular stylesheets merged via a CSS `@import` or post-processor.
+
+### Maintainability
+
+- **Design Token Decoupling:** The use of CSS custom properties for all core visual properties ensures that palette updates, typography adjustments, and dark-mode additions can be executed in one location without invasive DOM edits.
+- **Component Class Naming:** Class names follow an intuitive semantic naming pattern (`.bio-header`, `.profile-header`, `.data-table`, `.contact-form`, `.tracker-section`).
+
+### Scalability
+
+- **Static Footprint:** Zero server overhead and zero runtime dependency maintenance. The project can scale indefinitely on static CDN edges (GitHub Pages, Cloudflare Pages, Vercel, AWS S3).
+- **Extensibility:** The layout container is designed to easily accommodate additional sections (e.g., certifications, published articles, open-source repositories).
+
+### Accessibility Review
+
+- **Landmarks:** Screen readers can navigate between distinct landmarks (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`).
+- **Form Association:** Every input and textarea explicitly binds to a matching `<label for="...">`.
+- **Keyboard Traversal:** Native interactive controls (`<summary>`, `<button>`, `<a>`, `<input>`) maintain default focus rings and full keyboard operability.
+- **Scroll Offset:** Anchor jumps account for the sticky header via `scroll-margin-top: 80px`.
+
+### Responsive Design
+
+- **Grid Dynamics:** The personal info grid adapts dynamically via `repeat(auto-fit, minmax(200px, 1fr))` without hardcoded intermediate breakpoints.
+- **Mobile Breakpoint (`max-width: 600px`):**
+  - Navigation links wrap into centered stacks.
+  - Profile header padding scales down from 40px to 20px.
+  - Personal info grid transitions to a single vertical column.
+  - Skill gauges and progress bars expand to full 100% container width.
+  - Contact links in the footer stack vertically for thumb-friendly touch targets.
+
+---
+
+## Performance
+
+- **Zero JavaScript Overhead:** Zero parsing, compiling, or execution time associated with external scripts.
+- **Minimal Network Transfer:** Total static page weight (HTML, CSS, local image) transfers under 35 KB, yielding near-instant First Contentful Paint (FCP).
+- **CSS Efficiency:** Uses native CSS properties avoiding layout thrashing.
+- **Table Overflow Safety:** `.table-responsive` prevents wide tabular content from causing horizontal layout breaking on mobile screens.
+
+---
+
+## Browser Compatibility
+
+Developer Bio relies on stable, modern web standards verified across evergreen desktop and mobile browsers:
+
+| Browser | Minimum Recommended Support | Verified Capabilities |
 | :--- | :--- | :--- |
-| `--primary-dark` | `#2b2d42` | Sticky header, profile hero, table text, footer background |
-| `--primary-light` | `#8d99ae` | Table header background, secondary buttons, subtle borders |
-| `--accent` | `#d90429` | Brand logo, section title accent borders, primary buttons, hover states |
-| `--bg-body` | `#e9ecef` | Body canvas background |
-| `--bg-container` | `#ffffff` | Main content card container |
-| `--bg-card` | `#f8f9fa` | Info grid card, contact form card, alternating table rows |
-| `--text-main` | `#343a40` | Body paragraph text, labels, description terms |
-| `--text-muted` | `#495057` | Secondary descriptions, definition descriptions |
-| `--text-light` | `#edf2f4` | Text displayed over dark surfaces (header, footer) |
-| `--font-stack` | `'Segoe UI', Roboto, Helvetica, Arial, sans-serif` | Global typography |
-
----
-
-## Responsive Design
-
-The layout adapts seamlessly across desktops, tablets, and mobile screens.
-
-### Strategy
-
-- **Fluid Grid Units:** The personal information cards use CSS Grid with `repeat(auto-fit, minmax(200px, 1fr))`, automatically adjusting column counts based on container width without requiring breakpoint triggers.
-- **Relative Widths:** The primary `.bio-container` is constrained to `width: 92%` with a `max-width: 800px`, maintaining comfortable margins on smaller viewports.
-- **Horizontal Scroll Protection:** The qualifications table is wrapped in `.table-responsive` with `overflow-x: auto`, preventing page-level horizontal overflow on narrow displays.
-
-### Breakpoint (`max-width: 600px`)
-
-When the viewport width drops to 600px or below, the following adaptations take effect:
-
-1. **Header & Navigation:** The header layout switches from a horizontal row to a centered column; navigation links wrap gracefully.
-2. **Profile & Content Spacing:** Padding inside `.profile-header` and `.main-content` adjusts from 30px/40px down to 20px for optimal screen real estate.
-3. **Personal Information:** The info grid simplifies to a single-column stack (`1fr`).
-4. **Skills Dashboard:** Skill items switch from side-by-side rows to stacked columns, allowing `<meter>` elements to take full container width (`100%`).
-5. **Progress Tracker:** Progress bar and label stack vertically, expanding the `<progress>` element to `100%`.
-6. **Footer Contacts:** Contact links in the `<address>` block stack vertically to improve touch target accessibility.
-
----
-
-## Accessibility
-
-The project incorporates established web accessibility practices:
-
-- **Explicit Form Associations:** Every `<input>` and `<textarea>` is linked to an explicit `<label for="...">` attribute.
-- **Autofill Support:** Inputs utilize standard `autocomplete` attributes (`name` and `email`) to assist user input.
-- **Semantic Landmark Roles:** Key page regions use `<header>`, `<nav>`, `<main>`, `<section>`, and `<footer>` instead of unsemantic `<div>` containers.
-- **Section Labelling:** Sections utilize `aria-labelledby` referencing their respective `<h2>` heading identifiers.
-- **Navigation Label:** The `<nav>` element explicitly declares `aria-label="Main Navigation"`.
-- **Accessible Tables:** The qualifications table features a descriptive `<caption>` along with `scope="col"` and `scope="row"` headers to assist screen reader table traversal.
-- **Keyboard Navigation:** Native interactive elements (`<summary>`, `<button>`, `<a>`, `<input>`) are keyboard-focusable with visible focus rings.
-- **Target Offset Handling:** In-page anchor jumps account for the sticky header height via `scroll-margin-top: 80px`, preventing targeted headings from being obscured.
-- **Content Contrast:** High-contrast text pairings are maintained throughout the design (for example, dark slate `#343a40` on white, and light off-white `#edf2f4` on dark navy `#2b2d42`).
-
----
-
-## Browser Support
-
-Tested and supported on modern evergreen browsers:
-
-- **Google Chrome**
-- **Mozilla Firefox**
-- **Microsoft Edge**
-- **Apple Safari**
-- **Opera**
-
-*Requires support for CSS Custom Properties, CSS Grid, CSS Flexbox, and native HTML5 elements (`<meter>`, `<progress>`, `<details>`).*
-
----
-
-## Learning Objectives
-
-This project serves as an educational exercise in front-end web fundamentals, demonstrating:
-
-1. **Semantic Document Outlining:** How to structure a web page logically using semantic landmarks rather than generic container elements.
-2. **Native HTML5 Capabilities:** Utilizing built-in elements (`<details>`, `<summary>`, `<meter>`, `<progress>`) to achieve interactivity without JavaScript overhead.
-3. **Pure CSS Layout Systems:** Implementing two-dimensional layouts with CSS Grid and one-dimensional layouts with Flexbox.
-4. **Design Token Architecture:** Structuring reusable styling variables using `:root` custom properties for clean maintainability.
-5. **Responsive Web Techniques:** Managing fluid layouts and mobile adaptations with targeted CSS media queries.
-6. **Accessible Form Design:** Pairing input fields with explicit labels, validation constraints, and autocomplete hints.
-
----
-
-## Deployment and Live Demo
-
-The project is structured as a static website and can be deployed directly to GitHub Pages or any static hosting platform.
-
-### Deploying to GitHub Pages
-
-1. Navigate to your repository on GitHub.
-2. Go to **Settings** > **Pages** (in the left sidebar).
-3. Under **Branch**, select `main` (or `Temp` if working on a feature branch) and the `/ (root)` folder.
-4. Click **Save**.
-5. Once the GitHub Actions deployment completes, your site will be live at:
-   ```text
-   https://<username>.github.io/Developer-Bio/
-   ```
-
-*(Replace `<username>` with your GitHub username, e.g., `https://bhabakjishnu.github.io/Developer-Bio/` once enabled).*
+| **Google Chrome** | Modern Evergreen | CSS Grid, Custom Properties, `<meter>`, `<progress>`, `<details>` |
+| **Mozilla Firefox** | Modern Evergreen | CSS Grid, Custom Properties, `<meter>`, `<progress>`, `<details>` |
+| **Apple Safari** | Modern Evergreen (iOS / macOS) | CSS Grid, Custom Properties, sticky positioning, `<details>` |
+| **Microsoft Edge** | Modern Evergreen | Chromium-based rendering parity |
 
 ---
 
 ## Future Improvements
 
-- [ ] **Theme Mode Switcher:** Add a lightweight CSS-only or JavaScript toggle for dark and light theme modes.
-- [ ] **Project Case Studies:** Expand the projects section with screenshots and dedicated links to live applications.
-- [ ] **Resume Action:** Add a direct download button for an updated PDF resume.
-- [ ] **Client-Side Form Feedback:** Provide immediate feedback on form submission state.
+- [ ] **CSS Theme Switcher:** Implement a light/dark mode toggle utilizing CSS `:has()` or lightweight vanilla JavaScript.
+- [ ] **Modular CSS Migration:** Populate the placeholder files in `assets/css/` to establish a maintainable design system architecture.
+- [ ] **Local SVG Avatar:** Replace third-party UI Avatars network fallback with an embedded local SVG icon.
+- [ ] **Interactive Case Studies:** Expand the projects section with live preview links, tech badges, and modal overviews.
+- [ ] **Automated CI/CD Checks:** Add GitHub Actions workflows for W3C HTML/CSS validation and markdown linting.
 
 ---
 
 ## Contributing
 
-Contributions, issues, and suggestions are welcome!
+Contributions and technical feedback are welcome!
 
-1. Fork the repository.
-2. Create your feature branch:
+1. **Fork the repository** on GitHub.
+2. **Create a feature branch:**
    ```bash
-   git checkout -b feature/your-feature-name
+   git checkout -b feature/your-improvement-name
    ```
-3. Commit your changes:
+3. **Commit your changes:**
    ```bash
-   git commit -m "Add descriptive commit message"
+   git commit -m "feat: describe the specific improvement"
    ```
-4. Push to the branch:
+4. **Push to your feature branch:**
    ```bash
-   git push origin feature/your-feature-name
+   git push origin feature/your-improvement-name
    ```
-5. Open a Pull Request on GitHub.
+5. **Open a Pull Request** against the `main` branch.
 
 ---
 
 ## License
 
-This project does not currently include a formal open-source license. All rights are retained by the author. If you plan to reuse portions of this project for personal portfolios or educational purposes, please credit the author.
+No formal open-source license is currently specified for this repository. All rights are retained by the author. You may reference this project for personal study and educational purposes.
 
 ---
 
-## Author
+## Author & Contact
 
 **Jishnu Bhabak**  
 Computer Science Student & Aspiring Web Developer  
@@ -424,4 +423,9 @@ Sat Simulia, India
 
 - **GitHub:** [@bhabakjishnu](https://github.com/bhabakjishnu)
 - **Email:** [bhabakjishnu2004@gmail.com](mailto:bhabakjishnu2004@gmail.com)
-- **Phone:** [+91 6294 131 405](tel:+916294131405)
+
+---
+
+## Disclaimer
+
+This website is a personal developer portfolio and educational project. External services referenced (Formspree and UI Avatars) are property of their respective providers. No personal contact phone numbers are published or maintained in this repository.
