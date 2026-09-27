@@ -7,19 +7,27 @@
     <meta name="description"
         content="Developer bio page for Jishnu Bhabak, aspiring web developer specializing in HTML, CSS, and JavaScript.">
     <title>Jishnu Bhabak - Developer Bio</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css"
+        integrity="sha512-x9WwyMYBnlXMNQ6kQ/Lyzu1NqIhLQKL5Oq6xByfXuRj7s9CskyCbLv/1IjqzJmXwFXWr0ov6jBV7Qbc0hh9nHg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="assets/css/style.css?v=2">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
     <header class="bio-header">
-        <div class="header-brand">.dEV</div>
+        <a href="#home" class="header-brand"><i class="fa-solid fa-code" aria-hidden="true"></i> .dEV</a>
         <nav class="main-nav" aria-label="Main Navigation">
             <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#qualifications">Qualifications</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#home"><i class="fa-solid fa-house" aria-hidden="true"></i> Home</a></li>
+                <li><a href="#about"><i class="fa-solid fa-user" aria-hidden="true"></i> About</a></li>
+                <li><a href="#qualifications"><i class="fa-solid fa-award" aria-hidden="true"></i> Qualifications</a></li>
+                <li><a href="#projects"><i class="fa-solid fa-laptop-code" aria-hidden="true"></i> Projects</a></li>
+                <li><a href="#contact"><i class="fa-solid fa-paper-plane" aria-hidden="true"></i> Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -38,7 +46,7 @@
         </div>
         <main class="main-content">
             <section id="about" aria-labelledby="personal-info-heading" class="bio-section">
-                <h2 id="personal-info-heading" class="section-title">Personal Information</h2>
+                <h2 id="personal-info-heading" class="section-title"><i class="fa-solid fa-id-card section-icon" aria-hidden="true"></i> Personal Information</h2>
                 <dl class="info-grid">
                     <div class="info-item">
                         <dt>Name:</dt>
@@ -66,7 +74,7 @@
                 </p>
             </section>
             <section id="qualifications" aria-labelledby="qualifications-heading" class="bio-section">
-                <h2 id="qualifications-heading" class="section-title">My Qualifications</h2>
+                <h2 id="qualifications-heading" class="section-title"><i class="fa-solid fa-trophy section-icon" aria-hidden="true"></i> My Qualifications</h2>
                 <div class="table-responsive">
                     <table class="data-table">
                         <caption>Competition placements by technology</caption>
@@ -102,7 +110,7 @@
                 </div>
             </section>
             <section id="skills" aria-labelledby="skills-heading" class="bio-section">
-                <h2 id="skills-heading" class="section-title">Technical Skills Dashboard</h2>
+                <h2 id="skills-heading" class="section-title"><i class="fa-solid fa-sliders section-icon" aria-hidden="true"></i> Technical Skills Dashboard</h2>
                 <ul class="skills-list">
                     <li class="skill-item">
                         <label for="html-skill">HTML5 Semantic Structure:</label>
@@ -122,7 +130,7 @@
                 </ul>
             </section>
             <section id="projects" aria-labelledby="projects-heading" class="bio-section">
-                <h2 id="projects-heading" class="section-title">My Projects</h2>
+                <h2 id="projects-heading" class="section-title"><i class="fa-solid fa-laptop-code section-icon" aria-hidden="true"></i> My Projects</h2>
                 <details class="project-details" open>
                     <summary>Strict HTML5 Bio Page</summary>
                     <p>A completely pure HTML5 website built for my computer science assignment to demonstrate semantic
@@ -134,7 +142,7 @@
                 </details>
             </section>
             <section id="contact" aria-labelledby="contact-heading" class="bio-section">
-                <h2 id="contact-heading" class="section-title">Send Me a Message</h2>
+                <h2 id="contact-heading" class="section-title"><i class="fa-solid fa-envelope section-icon" aria-hidden="true"></i> Send Me a Message</h2>
                 <form action="https://formspree.io/f/your_endpoint_here" method="post" class="contact-form">
                     <div class="form-group">
                         <label for="name">Your Name:</label>
@@ -151,13 +159,13 @@
                             placeholder="How can I help you?"></textarea>
                     </div>
                     <div class="form-actions">
-                        <button type="submit" class="btn btn-primary">Submit</button>
-                        <button type="reset" class="btn btn-secondary">Clear</button>
+                        <button type="submit" class="btn btn-primary"><i class="fa-solid fa-paper-plane" aria-hidden="true"></i> Submit</button>
+                        <button type="reset" class="btn btn-secondary"><i class="fa-solid fa-rotate-left" aria-hidden="true"></i> Clear</button>
                     </div>
                 </form>
             </section>
             <section aria-labelledby="learning-status-heading" class="tracker-section">
-                <h2 id="learning-status-heading">Learning Progress Tracker</h2>
+                <h2 id="learning-status-heading"><i class="fa-solid fa-chart-line section-icon" aria-hidden="true"></i> Learning Progress Tracker</h2>
                 <p class="tracker-status">Syncing latest skills to server...</p>
                 <div class="tracker-bar">
                     <label for="learning-progress">Overall Progress:</label>
@@ -165,17 +173,106 @@
                 </div>
             </section>
         </main>
-        <footer class="bio-footer">
-            <address class="contact-info">
-                <p>
-                    <strong>Email:</strong>
-                    <a href="mailto:bhabakjishnu2004@gmail.com">bhabakjishnu2004@gmail.com</a>
-                </p>
-            </address>
-            <hr>
-            <p class="copyright">&copy; 2026 Jishnu Bhabak. Built with Semantic HTML5 & CSS3.</p>
-        </footer>
     </div>
+
+    <!-- Complete Separate Footer below #home -->
+    <footer class="bio-footer" role="contentinfo">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <!-- Column 1: Brand & Developer Bio -->
+                <div class="footer-col footer-about">
+                    <a href="#home" class="footer-brand" aria-label="Developer Bio Home">
+                        <i class="fa-solid fa-code" aria-hidden="true"></i> .dEV
+                    </a>
+                    <p class="footer-bio">
+                        Aspiring front-end developer passionate about writing clean, semantic HTML5, modern responsive CSS3, and accessible web experiences.
+                    </p>
+                    <div class="footer-socials" aria-label="Social Profiles">
+                        <a href="https://github.com/bhabakjishnu" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile" class="social-icon-btn">
+                            <i class="fa-brands fa-github" aria-hidden="true"></i>
+                        </a>
+                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile" class="social-icon-btn">
+                            <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+                        </a>
+                        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter Profile" class="social-icon-btn">
+                            <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
+                        </a>
+                        <a href="mailto:bhabakjishnu2004@gmail.com" aria-label="Send Email" class="social-icon-btn">
+                            <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Column 2: Quick Links -->
+                <div class="footer-col footer-links">
+                    <h3 class="footer-heading">Quick Links</h3>
+                    <ul>
+                        <li><a href="#home"><i class="fa-solid fa-chevron-right" aria-hidden="true"></i> Home</a></li>
+                        <li><a href="#about"><i class="fa-solid fa-chevron-right" aria-hidden="true"></i> About Me</a></li>
+                        <li><a href="#qualifications"><i class="fa-solid fa-chevron-right" aria-hidden="true"></i> Qualifications</a></li>
+                        <li><a href="#skills"><i class="fa-solid fa-chevron-right" aria-hidden="true"></i> Technical Skills</a></li>
+                        <li><a href="#projects"><i class="fa-solid fa-chevron-right" aria-hidden="true"></i> Projects</a></li>
+                        <li><a href="#contact"><i class="fa-solid fa-chevron-right" aria-hidden="true"></i> Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Contact & Address -->
+                <div class="footer-col footer-contact">
+                    <h3 class="footer-heading">Get in Touch</h3>
+                    <address class="footer-address">
+                        <div class="contact-entry">
+                            <i class="fa-solid fa-envelope contact-icon" aria-hidden="true"></i>
+                            <div>
+                                <span class="entry-label">Email</span>
+                                <a href="mailto:bhabakjishnu2004@gmail.com" class="entry-link">bhabakjishnu2004@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="contact-entry">
+                            <i class="fa-solid fa-location-dot contact-icon" aria-hidden="true"></i>
+                            <div>
+                                <span class="entry-label">Location</span>
+                                <span class="entry-text">Sat Simulia, India</span>
+                            </div>
+                        </div>
+                        <div class="contact-entry">
+                            <i class="fa-solid fa-circle-check contact-icon status-active" aria-hidden="true"></i>
+                            <div>
+                                <span class="entry-label">Status</span>
+                                <span class="entry-text">Open to Opportunities</span>
+                            </div>
+                        </div>
+                    </address>
+                </div>
+
+                <!-- Column 4: Technologies -->
+                <div class="footer-col footer-tech">
+                    <h3 class="footer-heading">Built With</h3>
+                    <div class="tech-pills">
+                        <span class="tech-pill"><i class="fa-brands fa-html5" aria-hidden="true"></i> HTML5</span>
+                        <span class="tech-pill"><i class="fa-brands fa-css3-alt" aria-hidden="true"></i> CSS3</span>
+                        <span class="tech-pill"><i class="fa-brands fa-js" aria-hidden="true"></i> JavaScript</span>
+                        <span class="tech-pill"><i class="fa-solid fa-font-awesome" aria-hidden="true"></i> Font Awesome</span>
+                        <span class="tech-pill"><i class="fa-brands fa-google" aria-hidden="true"></i> Google Fonts</span>
+                        <span class="tech-pill"><i class="fa-solid fa-mobile-screen-button" aria-hidden="true"></i> Responsive</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Bottom Bar -->
+            <div class="footer-bottom">
+                <p class="copyright">
+                    &copy; 2026 Jishnu Bhabak. Built with Semantic HTML5 &amp; CSS3.
+                </p>
+                <div class="footer-bottom-badge">
+                    <span>Crafted with <i class="fa-solid fa-heart heart-beat" aria-hidden="true"></i> for the Web</span>
+                </div>
+                <a href="#home" class="back-to-top-btn" aria-label="Back to top of page">
+                    <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+                    <span>Back to Top</span>
+                </a>
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>
