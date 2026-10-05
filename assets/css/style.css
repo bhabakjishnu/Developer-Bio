@@ -330,14 +330,214 @@ body {
 }
 
 /* ==========================================================================
-   Projects Details
+   Project Cards & Showcase Section
    ========================================================================== */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin-top: 15px;
+}
+
+.project-card,
 .project-details {
     background-color: var(--bg-card);
     border: 1px solid var(--border-color);
-    border-radius: 6px;
-    padding: 15px;
-    margin-bottom: 10px;
+    border-radius: var(--border-radius-md);
+    padding: 24px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 2px 8px rgba(43, 45, 66, 0.04);
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+                box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+                border-color 0.3s ease;
+}
+
+/* Gradient accent bar on top of the card that glows on hover */
+.project-card::before,
+.project-details::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--accent), #ff5a79);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* Modern hover elevation & border glow micro-interaction */
+.project-card:hover,
+.project-details:hover {
+    transform: translateY(-5px);
+    border-color: rgba(217, 4, 41, 0.45);
+    box-shadow: 0 14px 28px rgba(43, 45, 66, 0.08), 0 0 18px rgba(217, 4, 41, 0.16);
+}
+
+.project-card:hover::before,
+.project-details:hover::before {
+    opacity: 1;
+}
+
+.project-card:focus-within,
+.project-details:focus-within {
+    border-color: rgba(217, 4, 41, 0.5);
+    box-shadow: 0 8px 24px rgba(43, 45, 66, 0.08), 0 0 0 3px rgba(217, 4, 41, 0.15);
+}
+
+.project-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.project-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--primary-dark);
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    line-height: 1.35;
+}
+
+.project-icon {
+    color: var(--accent);
+    font-size: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover .project-icon {
+    transform: rotate(6deg) scale(1.1);
+}
+
+.project-badge {
+    font-size: 0.72rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    padding: 3px 9px;
+    border-radius: 12px;
+    background-color: rgba(217, 4, 41, 0.1);
+    color: var(--accent);
+    border: 1px solid rgba(217, 4, 41, 0.25);
+    white-space: nowrap;
+}
+
+.project-badge-upcoming {
+    background-color: rgba(46, 196, 182, 0.12);
+    color: #1b9aaa;
+    border-color: rgba(46, 196, 182, 0.3);
+}
+
+.project-description {
+    font-size: 0.92rem;
+    color: var(--text-muted);
+    line-height: 1.65;
+    margin: 0 0 16px 0;
+    flex-grow: 1;
+}
+
+.project-tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    margin-bottom: 20px;
+}
+
+.tech-tag {
+    font-size: 0.76rem;
+    padding: 4px 10px;
+    background-color: var(--bg-container);
+    border: 1px solid var(--border-light);
+    border-radius: 14px;
+    color: var(--primary-dark);
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    transition: all 0.2s ease;
+}
+
+.tech-tag i {
+    color: var(--accent);
+    font-size: 0.72rem;
+}
+
+.project-card:hover .tech-tag {
+    border-color: rgba(217, 4, 41, 0.3);
+    background-color: #ffffff;
+}
+
+.project-links {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    padding-top: 15px;
+    border-top: 1px solid var(--border-color);
+    margin-top: auto;
+}
+
+.project-link {
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 8px 14px;
+    border-radius: var(--border-radius-sm);
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    cursor: pointer;
+}
+
+.project-link i {
+    font-size: 0.85rem;
+    transition: transform 0.2s ease;
+}
+
+.project-link-primary {
+    background-color: var(--accent);
+    color: #ffffff;
+    border: 1px solid var(--accent);
+    box-shadow: 0 2px 6px rgba(217, 4, 41, 0.2);
+}
+
+.project-link-primary:hover {
+    background-color: #b70020;
+    border-color: #b70020;
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(217, 4, 41, 0.35);
+}
+
+.project-link-primary:hover i {
+    transform: scale(1.15);
+}
+
+.project-link-secondary {
+    background-color: var(--bg-container);
+    color: var(--primary-dark);
+    border: 1px solid var(--border-color);
+}
+
+.project-link-secondary:hover {
+    background-color: var(--primary-dark);
+    border-color: var(--primary-dark);
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(43, 45, 66, 0.15);
+}
+
+.project-link-secondary:hover i {
+    color: var(--accent);
+    transform: translate(2px, -2px);
 }
 
 .project-details summary {
@@ -350,6 +550,191 @@ body {
 .project-details p {
     margin: 10px 0 0 0;
     color: var(--text-muted);
+}
+
+/* ==========================================================================
+   Contact Direct Info & Copy Email Micro-Interactions
+   ========================================================================== */
+.contact-direct-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius-md);
+    padding: 16px 20px;
+    margin-bottom: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    box-shadow: var(--shadow-sm);
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.contact-direct-card:hover {
+    border-color: rgba(217, 4, 41, 0.35);
+    box-shadow: 0 4px 14px rgba(43, 45, 66, 0.06);
+}
+
+.contact-direct-info {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.contact-direct-icon {
+    font-size: 1.4rem;
+    color: var(--accent);
+}
+
+.contact-direct-label {
+    display: block;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+    color: var(--text-meta);
+    margin-bottom: 2px;
+}
+
+.contact-direct-link {
+    color: var(--primary-dark);
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.contact-direct-link:hover {
+    color: var(--accent);
+}
+
+/* Footer email row */
+.footer-email-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 2px;
+}
+
+/* Copy Email Button Base */
+.btn-copy-email {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    font-family: inherit;
+    font-size: 0.84rem;
+    font-weight: 600;
+    padding: 7px 14px;
+    border-radius: var(--border-radius-sm);
+    border: 1px solid var(--border-color);
+    background-color: var(--bg-container);
+    color: var(--primary-dark);
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    white-space: nowrap;
+}
+
+.btn-copy-email i {
+    font-size: 0.85rem;
+    transition: transform 0.2s ease;
+}
+
+.btn-copy-email:hover {
+    background-color: var(--accent);
+    border-color: var(--accent);
+    color: #ffffff;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 10px rgba(217, 4, 41, 0.25);
+}
+
+.btn-copy-email:hover i {
+    transform: scale(1.1);
+}
+
+.btn-copy-email:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(217, 4, 41, 0.35);
+}
+
+/* In Footer: contrast styling for dark background */
+.footer-address .btn-copy-email-sm {
+    padding: 4px 9px;
+    font-size: 0.75rem;
+    background-color: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    color: var(--text-light);
+}
+
+.footer-address .btn-copy-email-sm:hover {
+    background-color: var(--accent);
+    border-color: var(--accent);
+    color: #ffffff;
+    box-shadow: 0 3px 8px rgba(217, 4, 41, 0.35);
+}
+
+/* Copied visual feedback state */
+.btn-copy-email.copied {
+    background-color: #2ec4b6 !important;
+    border-color: #2ec4b6 !important;
+    color: #ffffff !important;
+    transform: scale(1.02);
+    box-shadow: 0 4px 12px rgba(46, 196, 182, 0.35) !important;
+}
+
+.btn-copy-email.copied i {
+    animation: copiedBounce 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes copiedBounce {
+    0% {
+        transform: scale(0.6);
+    }
+    60% {
+        transform: scale(1.25);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* ==========================================================================
+   Toast Notification Component
+   ========================================================================== */
+.toast {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #1a1d2e;
+    color: #ffffff;
+    padding: 13px 22px;
+    border-radius: var(--border-radius-md);
+    border: 1px solid rgba(217, 4, 41, 0.4);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35), 0 0 16px rgba(217, 4, 41, 0.2);
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.92rem;
+    font-weight: 500;
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(18px) scale(0.96);
+    pointer-events: none;
+    transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+                transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+                visibility 0.3s;
+}
+
+.toast.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0) scale(1);
+    pointer-events: auto;
+}
+
+.toast-icon {
+    color: #2ec4b6;
+    font-size: 1.15rem;
 }
 
 /* ==========================================================================
@@ -816,6 +1201,43 @@ body {
         width: 100%;
     }
 
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-card,
+    .project-details {
+        padding: 18px;
+    }
+
+    .project-links {
+        flex-direction: column;
+    }
+
+    .project-link {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .contact-direct-card {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 14px;
+        padding: 16px;
+    }
+
+    .contact-direct-info {
+        align-items: flex-start;
+    }
+
+    .btn-copy-email-direct {
+        width: 100%;
+    }
+
+    .footer-email-row {
+        flex-wrap: wrap;
+    }
+
     .tracker-bar {
         flex-direction: column;
         gap: 5px;
@@ -843,5 +1265,18 @@ body {
 
     .back-to-top-btn {
         margin-top: 4px;
+    }
+
+    .toast {
+        left: 20px;
+        right: 20px;
+        bottom: 20px;
+        justify-content: center;
+        text-align: center;
+        transform: translateY(18px) scale(0.96);
+    }
+
+    .toast.show {
+        transform: translateY(0) scale(1);
     }
 }

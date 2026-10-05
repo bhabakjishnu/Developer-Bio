@@ -1,0 +1,129 @@
+/* ==========================================================================
+   Buttons Component (Primary, Secondary & Copy Email Micro-Interactions)
+   ========================================================================== */
+
+.btn {
+    border: none;
+    padding: 12px 24px;
+    border-radius: var(--border-radius-sm);
+    font-weight: 600;
+    cursor: pointer;
+    flex: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-family: inherit;
+    font-size: 0.95rem;
+    transition: all 0.2s ease;
+}
+
+.btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.btn:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(217, 4, 41, 0.35);
+}
+
+.btn-primary {
+    background-color: var(--accent);
+    color: var(--bg-container);
+}
+
+.btn-primary:hover {
+    background-color: #b70020;
+}
+
+.btn-secondary {
+    background-color: var(--primary-light);
+    color: var(--bg-container);
+}
+
+.btn-secondary:hover {
+    background-color: #7b879c;
+}
+
+/* Copy Email Button Base */
+.btn-copy-email {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    font-family: inherit;
+    font-size: 0.84rem;
+    font-weight: 600;
+    padding: 7px 14px;
+    border-radius: var(--border-radius-sm);
+    border: 1px solid var(--border-color);
+    background-color: var(--bg-container);
+    color: var(--primary-dark);
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    white-space: nowrap;
+}
+
+.btn-copy-email i {
+    font-size: 0.85rem;
+    transition: transform 0.2s ease;
+}
+
+.btn-copy-email:hover {
+    background-color: var(--accent);
+    border-color: var(--accent);
+    color: #ffffff;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 10px rgba(217, 4, 41, 0.25);
+}
+
+.btn-copy-email:hover i {
+    transform: scale(1.1);
+}
+
+.btn-copy-email:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(217, 4, 41, 0.35);
+}
+
+/* In Footer: contrast styling for dark background */
+.footer-address .btn-copy-email-sm {
+    padding: 4px 9px;
+    font-size: 0.75rem;
+    background-color: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    color: var(--text-light);
+}
+
+.footer-address .btn-copy-email-sm:hover {
+    background-color: var(--accent);
+    border-color: var(--accent);
+    color: #ffffff;
+    box-shadow: 0 3px 8px rgba(217, 4, 41, 0.35);
+}
+
+/* Copied visual feedback state */
+.btn-copy-email.copied {
+    background-color: #2ec4b6 !important;
+    border-color: #2ec4b6 !important;
+    color: #ffffff !important;
+    transform: scale(1.02);
+    box-shadow: 0 4px 12px rgba(46, 196, 182, 0.35) !important;
+}
+
+.btn-copy-email.copied i {
+    animation: copiedBounce 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes copiedBounce {
+    0% {
+        transform: scale(0.6);
+    }
+    60% {
+        transform: scale(1.25);
+    }
+    100% {
+        transform: scale(1);
+    }
+}

@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css"
         integrity="sha512-x9WwyMYBnlXMNQ6kQ/Lyzu1NqIhLQKL5Oq6xByfXuRj7s9CskyCbLv/1IjqzJmXwFXWr0ov6jBV7Qbc0hh9nHg=="
         crossorigin="anonymous" referrerpolicy="no-referrer">
-    <link rel="stylesheet" href="assets/css/style.css?v=2">
+    <link rel="stylesheet" href="assets/css/style.css?v=3">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -131,18 +131,75 @@
             </section>
             <section id="projects" aria-labelledby="projects-heading" class="bio-section">
                 <h2 id="projects-heading" class="section-title"><i class="fa-solid fa-laptop-code section-icon" aria-hidden="true"></i> My Projects</h2>
-                <details class="project-details" open>
-                    <summary>Strict HTML5 Bio Page</summary>
-                    <p>A completely pure HTML5 website built for my computer science assignment to demonstrate semantic
-                        markup, accessibility, and document structure.</p>
-                </details>
-                <details class="project-details">
-                    <summary>Future Developments</summary>
-                    <p>More exciting web development projects coming soon as I continue expanding my toolkit!</p>
-                </details>
+                <div class="projects-grid">
+                    <article class="project-card">
+                        <div class="project-card-header">
+                            <h3 class="project-title">
+                                <i class="fa-solid fa-code-branch project-icon" aria-hidden="true"></i>
+                                Strict HTML5 Bio Page
+                            </h3>
+                            <span class="project-badge">Featured</span>
+                        </div>
+                        <p class="project-description">
+                            A completely pure, accessible HTML5 developer profile and portfolio built to demonstrate semantic markup, responsive design, and CSS3 design token architecture.
+                        </p>
+                        <div class="project-tech-tags">
+                            <span class="tech-tag"><i class="fa-brands fa-html5" aria-hidden="true"></i> HTML5</span>
+                            <span class="tech-tag"><i class="fa-brands fa-css3-alt" aria-hidden="true"></i> CSS3</span>
+                            <span class="tech-tag"><i class="fa-solid fa-mobile-screen-button" aria-hidden="true"></i> Responsive</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/bhabakjishnu/Developer-Bio" target="_blank" rel="noopener noreferrer" class="project-link project-link-primary">
+                                <i class="fa-brands fa-github" aria-hidden="true"></i> GitHub Repo
+                            </a>
+                            <a href="https://bhabakjishnu.github.io/Developer-Bio/" target="_blank" rel="noopener noreferrer" class="project-link project-link-secondary">
+                                <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Live Demo
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-card-header">
+                            <h3 class="project-title">
+                                <i class="fa-solid fa-layer-group project-icon" aria-hidden="true"></i>
+                                Future Developments
+                            </h3>
+                            <span class="project-badge project-badge-upcoming">In Progress</span>
+                        </div>
+                        <p class="project-description">
+                            Modern front-end applications and interactive JavaScript UI components currently in active development to expand my software engineering toolkit.
+                        </p>
+                        <div class="project-tech-tags">
+                            <span class="tech-tag"><i class="fa-brands fa-js" aria-hidden="true"></i> JavaScript</span>
+                            <span class="tech-tag"><i class="fa-solid fa-code" aria-hidden="true"></i> Web APIs</span>
+                            <span class="tech-tag"><i class="fa-solid fa-compass-drafting" aria-hidden="true"></i> UI Components</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/bhabakjishnu" target="_blank" rel="noopener noreferrer" class="project-link project-link-primary">
+                                <i class="fa-brands fa-github" aria-hidden="true"></i> Follow on GitHub
+                            </a>
+                            <a href="https://github.com/bhabakjishnu?tab=repositories" target="_blank" rel="noopener noreferrer" class="project-link project-link-secondary">
+                                <i class="fa-solid fa-code-fork" aria-hidden="true"></i> All Repositories
+                            </a>
+                        </div>
+                    </article>
+                </div>
             </section>
             <section id="contact" aria-labelledby="contact-heading" class="bio-section">
                 <h2 id="contact-heading" class="section-title"><i class="fa-solid fa-envelope section-icon" aria-hidden="true"></i> Send Me a Message</h2>
+                <div class="contact-direct-card">
+                    <div class="contact-direct-info">
+                        <i class="fa-solid fa-envelope-open-text contact-direct-icon" aria-hidden="true"></i>
+                        <div>
+                            <span class="contact-direct-label">Direct Contact:</span>
+                            <a href="mailto:bhabakjishnu2004@gmail.com" class="contact-direct-link">bhabakjishnu2004@gmail.com</a>
+                        </div>
+                    </div>
+                    <button type="button" class="btn-copy-email btn-copy-email-direct" data-email="bhabakjishnu2004@gmail.com" aria-label="Copy email address to clipboard" title="Copy email to clipboard">
+                        <i class="fa-regular fa-copy" aria-hidden="true"></i>
+                        <span class="btn-copy-text">Copy Email</span>
+                    </button>
+                </div>
                 <form action="https://formspree.io/f/your_endpoint_here" method="post" class="contact-form">
                     <div class="form-group">
                         <label for="name">Your Name:</label>
@@ -224,7 +281,13 @@
                             <i class="fa-solid fa-envelope contact-icon" aria-hidden="true"></i>
                             <div>
                                 <span class="entry-label">Email</span>
-                                <a href="mailto:bhabakjishnu2004@gmail.com" class="entry-link">bhabakjishnu2004@gmail.com</a>
+                                <div class="footer-email-row">
+                                    <a href="mailto:bhabakjishnu2004@gmail.com" class="entry-link">bhabakjishnu2004@gmail.com</a>
+                                    <button type="button" class="btn-copy-email btn-copy-email-sm" data-email="bhabakjishnu2004@gmail.com" aria-label="Copy email address to clipboard" title="Copy email to clipboard">
+                                        <i class="fa-regular fa-copy" aria-hidden="true"></i>
+                                        <span class="btn-copy-text">Copy</span>
+                                    </button>
+                                </div>
                             </div>
                         </div>
                         <div class="contact-entry">
@@ -273,6 +336,15 @@
             </div>
         </div>
     </footer>
+
+    <!-- Toast Notification for Copy Feedback -->
+    <div id="toast" class="toast" role="status" aria-live="polite" aria-atomic="true">
+        <i class="fa-solid fa-circle-check toast-icon" aria-hidden="true"></i>
+        <span class="toast-message">Copied to clipboard!</span>
+    </div>
+
+    <!-- Interactive Scripts -->
+    <script src="assets/js/main.js"></script>
 </body>
 
 </html>
