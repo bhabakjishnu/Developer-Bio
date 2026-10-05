@@ -67,7 +67,9 @@ The project demonstrates modern web fundamentals without external JavaScript lib
 
 ## Desktop Preview
 
-🔗 [Click to view Desktop Preview](./assets/screenshots/desktop.png)
+<p align="center">
+  <img src="./assets/screenshots/desktop.png" alt="Developer Bio Desktop Preview" width="100%">
+</p>
 
 ---
 
