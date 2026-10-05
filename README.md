@@ -141,6 +141,8 @@ Developer-Bio/
 │   │   └── style.css            # Active monolithic stylesheet (tokens, layout, components, queries)
 │   ├── images/
 │   │   └── Profile.jpg          # Local profile photograph
+│   ├── js/
+│   │   └── main.js              # Client-side clipboard copy and toast notification handler
 │   └── screenshots/
 │       ├── desktop.png          # Primary desktop preview asset
 │       ├── mobile.png           # Mobile responsive capture
@@ -150,7 +152,7 @@ Developer-Bio/
 └── README.md                    # Project documentation & audit report
 ```
 
-> **Note on Stylesheet Structure:** The project currently bundles all production CSS rules into `assets/css/style.css` (544 lines). The subdirectories under `assets/css/` exist as scaffolding for a future modular CSS refactoring phase.
+> **Note on Stylesheet Structure:** The project bundles production CSS rules into `assets/css/style.css`, with modular component stylesheets in `assets/css/components/` (`cards.css`, `buttons.css`, etc.) maintaining modular parity.
 
 ---
 
