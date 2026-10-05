@@ -13,12 +13,16 @@ Thumbs.db
 desktop.ini
 
 # Editor & IDE Directories
+.vscode/
 .idea/
 *.suo
 *.ntvs*
 *.njsproj
 *.sublime-workspace
 *.sublime-project
+
+# Agent & AI configuration
+.agents/
 
 # Logs and runtime files
 *.log
@@ -31,5 +35,3 @@ node_modules/
 dist/
 build/
 .cache/
-.agents/
-.vscode/

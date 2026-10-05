@@ -112,7 +112,7 @@ The repository structure reflects a static front-end deployment with planned mod
 ```text
 Developer-Bio/
 ├── .vscode/
-│   └── settings.json            # Editor settings (Live Server port: 5501)
+│   └── settings.json            # Editor settings (ignored via .gitignore)
 ├── assets/
 │   ├── css/
 │   │   ├── base/                # Planned modular resets and typography
