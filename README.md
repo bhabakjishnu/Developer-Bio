@@ -420,11 +420,9 @@ No formal open-source license is currently specified for this repository. All ri
 ## Author & Contact
 
 **Jishnu Bhabak**  
-Computer Science Student & Aspiring Web Developer  
-Sat Simulia, India
+Computer Science Student & Aspiring Web Developer
 
 - **GitHub:** [@bhabakjishnu](https://github.com/bhabakjishnu)
-- **Email:** [bhabakjishnu2004@gmail.com](mailto:bhabakjishnu2004@gmail.com)
 
 ---
 
