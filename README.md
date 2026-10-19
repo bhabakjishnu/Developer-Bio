@@ -1,12 +1,16 @@
 # Developer Bio
 
-A lightweight, accessible, single-page personal biography and portfolio interface built with semantic HTML5 and vanilla CSS3.
+A lightweight, accessible, single-page personal biography and portfolio interface built with semantic HTML5, modern CSS3, and JavaScript.
 
-[![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
-[![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
-[![Dependencies](https://img.shields.io/badge/Dependencies-0_Zero-success?style=flat-square)](https://github.com/bhabakjishnu/Developer-Bio)
-[![Form Backend](https://img.shields.io/badge/Form_Backend-Formspree-FF5722?style=flat-square&logo=formspree&logoColor=white)](https://formspree.io/)
-[![GitHub Repo](https://img.shields.io/badge/GitHub-Developer--Bio-181717?style=flat-square&logo=github)](https://github.com/bhabakjishnu/Developer-Bio)
+[![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
+[![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
+[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+[![Font Awesome](https://img.shields.io/badge/Font_Awesome-528DD7?style=for-the-badge&logo=font-awesome&logoColor=white)](https://fontawesome.com/)
+[![Google Fonts](https://img.shields.io/badge/Google_Fonts-4285F4?style=for-the-badge&logo=google-fonts&logoColor=white)](https://fonts.google.com/)
+[![Formspree](https://img.shields.io/badge/Formspree-FF5722?style=for-the-badge&logo=formspree&logoColor=white)](https://formspree.io/)
+[![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)](https://git-scm.com/)
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/bhabakjishnu/Developer-Bio)
+[![VS Code](https://img.shields.io/badge/VS_Code-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white)](https://code.visualstudio.com/)
 
 ---
 
@@ -158,10 +162,28 @@ Developer-Bio/
 
 ## Tech Stack
 
+### Core Technologies & Libraries
+
+[![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
+[![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
+[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+[![Font Awesome](https://img.shields.io/badge/Font_Awesome-528DD7?style=for-the-badge&logo=font-awesome&logoColor=white)](https://fontawesome.com/)
+[![Google Fonts](https://img.shields.io/badge/Google_Fonts-4285F4?style=for-the-badge&logo=google-fonts&logoColor=white)](https://fonts.google.com/)
+
+### Services & Tooling
+
+[![Formspree](https://img.shields.io/badge/Formspree-FF5722?style=for-the-badge&logo=formspree&logoColor=white)](https://formspree.io/)
+[![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)](https://git-scm.com/)
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/bhabakjishnu/Developer-Bio)
+[![VS Code](https://img.shields.io/badge/VS_Code-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white)](https://code.visualstudio.com/)
+
 | Technology | Purpose | Implementation Details |
 | :--- | :--- | :--- |
 | **HTML5** | Document Structure & Semantics | Semantic landmarks, definition lists, `<meter>`, `<progress>`, `<details>`, native form attributes |
 | **CSS3** | Layout, Theming & Responsiveness | `:root` custom properties, Flexbox, CSS Grid (`minmax`, `auto-fit`), `@media (max-width: 600px)` |
+| **JavaScript (ES6+)** | Dynamic Interactivity & Feedback | Clipboard copy actions, accessible toast notifications, and DOM interactivity (`assets/js/main.js`) |
+| **Font Awesome** | Vector Icons & Symbols | Iconography for header navigation, section headings, tech pills, and contact items |
+| **Google Fonts (Poppins)** | Typography | High-legibility Google Poppins sans-serif typeface tokens |
 | **Formspree** | Contact Form Processing | Form submission handler via `https://formspree.io/f/your_endpoint_here` |
 | **UI Avatars** | Resilient Avatar Fallback | Remote HTTP avatar generator called via `onerror` attribute |
 | **VS Code Live Server** | Local Development Environment | Configured to serve workspace at port `5501` |
